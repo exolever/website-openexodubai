@@ -25,7 +25,7 @@ const Vertical = ({ title, description, image, column }) =>
 
 const Horizontal = ({ title, description, image }) =>
   <>
-    <div className="col-lg-6  text-center">
+    <div className="col-lg-6 text-center">
       <img src={image} alt={title && title()} />
     </div>
     {title &&

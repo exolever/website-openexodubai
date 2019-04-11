@@ -16,7 +16,7 @@ function TeamMember(member){
   </div>)
 }
 
-const Section: React.SFC<Props> = ({ className, title, members }) => {
+const Team: React.SFC<Props> = ({ className, title, members }) => {
 
   return (
     <section className={`spad ${className}`}>
@@ -34,4 +34,4 @@ const Section: React.SFC<Props> = ({ className, title, members }) => {
   )
 };
 
-export default Section;
+export default Team;

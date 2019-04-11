@@ -11,23 +11,22 @@ import Books from '../components/Books';
 import Events from '../components/Events';
 import Team from '../components/Team';
 import Video from '../components/Video';
+import Section from '../components/Section';
 import HighlightSection from '../components/HighlightSection';
 
 // import * as sectionBg from '../img/bg-61-img.jpg';
 import * as sectionBg from '../img/main-bg.jpg';
 import * as sectionBgAlt from '../img/sub-bg.jpg';
-import * as mapBg from '../img/map.jpg';
+// import * as mapBg from '../img/map.jpg';
 import * as mapBgAlt from '../img/map-alt.jpg';
 import * as bg01 from '../img/bg01.jpg';
 import * as bg02 from '../img/bg02.png';
-
 import * as icon01 from '../img/icon01.png';
 import * as icon02 from '../img/icon02.png';
 import * as icon03 from '../img/icon03.png';
-import * as icon04 from '../img/icon04.png';
+// import * as icon04 from '../img/icon04.png';
 import * as book01 from '../img/book01.png';
 import * as book02 from '../img/book02.png';
-
 import * as emilie from '../img/coaches/emilie.png';
 import * as evonne from '../img/coaches/evonne.png';
 import * as francisco from '../img/coaches/francisco.png';
@@ -35,6 +34,15 @@ import * as luciana from '../img/coaches/luciana-pic.jpg';
 import * as paul from '../img/coaches/paul.png';
 import * as jaroslav from '../img/coaches/jaroslav.png';
 import * as Salimi from '../img/Salimi.png';
+import * as logo0 from '../img/logo/0.jpg';
+import * as logo1 from '../img/logo/1.jpg';
+import * as logo2 from '../img/logo/2.jpg';
+import * as logo3 from '../img/logo/3.jpg';
+import * as logo4 from '../img/logo/4.jpg';
+import * as logo5 from '../img/logo/5.jpg';
+import * as logo6 from '../img/logo/6.jpg';
+import * as logo7 from '../img/logo/7.jpg';
+import * as logo8 from '../img/logo/8.jpg';
 
 interface State {
   style: {
@@ -270,9 +278,25 @@ const DATA = {
       ]
     },
     ecosystem: {
-      title: '',
-      description: () =>
-        <p className="text-white">The OpenExO Ecosystem is a global transformation playground where 400+ exponential thought leaders, innovation coaches, disruption specialists, startup founders and tech industry gurus gather to solve strategic transformation challenges. We partner with ExO entities, accelerators, incubators, tech companies and technology specialists (artificial intelligence, blockchain, augmented & virtual reality, 3D printing, biotechnology, robotics, drones and more).</p>
+      title: 'The OpenExO Ecosystem',
+      description: () => <p className="text-white">The OpenExO Ecosystem is a global transformation playground where 400+ exponential thought leaders, innovation coaches, disruption specialists, startup founders and tech industry gurus gather to solve strategic transformation challenges. We partner with ExO entities, accelerators, incubators, tech companies and technology specialists (artificial intelligence, blockchain, augmented & virtual reality, 3D printing, biotechnology, robotics, drones and more).</p>
+    },
+    partners: {
+      title: `OpenExO Summit Partners & Sponsors`,
+      sections: [{
+        title: `Platinum Sponsor`,
+        logos: [logo5]
+      },
+      {
+        title: `Gold Sponsor`,
+        logos: [logo8]
+      },
+      {
+        title: `Strategic Partners`,
+        logos: [logo1, logo2, logo3, logo4, logo6, logo7]
+      }
+
+      ]
     },
     footer: {
       main: { text: 'OpenExO', url: 'https://www.exolever.com/' },
@@ -305,7 +329,7 @@ class IndexPage extends React.Component<any, State> {
             title={DATA.en.about.title}
             description={DATA.en.about.description}
             content={DATA.en.about.features}
-            />
+          />
 
           <Books
             title={DATA.en.books.title}
@@ -344,9 +368,51 @@ class IndexPage extends React.Component<any, State> {
 
           <HighlightSection title={DATA.en.ecosystem.title} backgroundImage={mapBgAlt} className="ecosystem">
             <div className="text-center">
-              {DATA.en.ecosystem.description}
+              {DATA.en.ecosystem.description()}
             </div>
           </HighlightSection>
+
+          <Section>
+            <div className="row spad text-center">
+              <h2 className="col-lg-12">{DATA.en.partners.title}</h2>
+            </div>
+            <div className="row text-center">
+              <h3 className="col-lg-12">{DATA.en.partners.sections[0].title}</h3>
+              {DATA.en.partners.sections[0].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
+            </div>
+            <div className="row text-center">
+              <h3 className="col-lg-12">{DATA.en.partners.sections[1].title}</h3>
+              {DATA.en.partners.sections[1].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
+            </div>
+            <div className="row text-center">
+              <h3 className="col-lg-12">{DATA.en.partners.sections[2].title}</h3>
+              {DATA.en.partners.sections[2].logos.map(logo => <div className="col-lg-4 logo-item"><img className="text-center" src={logo} /></div>)}
+            </div>
+          </Section>
+
+          <HighlightSection
+              title={`Transformation as a service`}
+              backgroundImage={sectionBgAlt}
+            />
+
+          <Section>
+            <div className="row">
+            <div className="col-lg-6 text-center">
+            <h3>ExO Sprint</h3>
+            <p>
+            An ExO Sprint is a 10-week process based on the book <a href="https://www.exponentialtransformationbook.com/" target="_blank"><strong><em>Exponential Transformation</em></strong></a> that helps organizations to evolve their business models from scarcity to abundance while dealing with the immune system. The ExO Sprint has been successfully run in large, medium and small organizations around the world. It is designed to rapidly move your organization’s leadership culture and management thinking forward.
+            </p>
+            </div>
+            <div className="col-lg-6 text-center">
+            <h3 >ExO Sprint</h3>
+            <p>ExO On-Demand is a customized product built around flexible access to our ExO Ecosystem members. Consult technology and industry specialists, enhance your strategic offsite with virtual advisors, incubate your disruptive initiatives with exponentially minded people... these are just a few of the ways we can help you if your organization wants to start or has already started a transformation process. </p>
+            </div>
+
+            </div>
+            <div class="text-center">
+            <a target="_blank" class="site-btn text-white" href="https://www.openexo.com/transformation-services">Request a service</a></div>
+          </Section>
+
           <Footer links={DATA.en.footer.links} copyright={DATA.en.footer.copyright} mainLogo={DATA.en.footer.main} />
         </Page>
         <style>
