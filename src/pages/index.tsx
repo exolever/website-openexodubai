@@ -17,7 +17,6 @@ import * as sectionBgAlt from '../img/sub-bg.jpg';
 import * as mapBg from '../img/map.jpg';
 import * as mapBgAlt from '../img/map-alt.jpg';
 
-
 import * as icon01 from '../img/icon01.png';
 import * as icon02 from '../img/icon02.png';
 import * as icon03 from '../img/icon03.png';
@@ -33,11 +32,6 @@ import * as paul from '../img/coaches/paul.png';
 import * as jaroslav from '../img/coaches/jaroslav.png';
 import Section from '../components/Team';
 import HighlightSection from '../components/HighlightSection';
-
-
-
-
-
 
 interface State {
   style: {
@@ -83,7 +77,7 @@ const DATA = {
     },
     books: {
       title: 'TRANSFORMATION AS A SERVICE',
-      titleBg: '/imgs/bg01.jpg',
+      titleBg: '/imgs/bg02.png',
       features: [
         {
           title: 'WHY do I need to transform?',
@@ -99,27 +93,27 @@ const DATA = {
         url: 'mailto:marketing@madtalks.com'
       }
     },
-    about2: {
-      features: [
-        {
-          description: () =>
-            <>
-              ExO Summits inspires, educates and supports; leaders, intrapreneurs and entrepreneurs worldwide to get started with transformation journeys.<br />
-              Transform from a traditional to an exponential operating model by moving away from a scarcity mindset towards one based on abundance. <br />
-              By understanding and applying the ExO framework to your organization you'll tap into growth by a factor of 10x.<br />
-              Be the first to learn about upcoming summits or organize a summit yourself
-            </>,
-          image: icon04
-        },
-      ],
-      button: {
-        label: 'LEARN MORE',
-        url: 'https://storage.googleapis.com/wzukusers/user-34745225/documents/5c987a606437dxmlkMHz/OpenExO%20Final.pdf'
-      }
-    },
+    // about2: {
+    //   features: [
+    //     {
+    //       description: () =>
+    //         <>
+    //           ExO Summits inspires, educates and supports; leaders, intrapreneurs and entrepreneurs worldwide to get started with transformation journeys.<br />
+    //           Transform from a traditional to an exponential operating model by moving away from a scarcity mindset towards one based on abundance. <br />
+    //           By understanding and applying the ExO framework to your organization you'll tap into growth by a factor of 10x.<br />
+    //           Be the first to learn about upcoming summits or organize a summit yourself
+    //         </>,
+    //       image: icon04
+    //     },
+    //   ],
+    //   button: {
+    //     label: 'LEARN MORE',
+    //     url: 'https://storage.googleapis.com/wzukusers/user-34745225/documents/5c987a606437dxmlkMHz/OpenExO%20Final.pdf'
+    //   }
+    // },
     events: {
       title: 'OpenExO Programme',
-      titleBg: '/imgs/bg02.png',
+      titleBg: '/imgs/bg01.jpg',
       image: icon01,
       items: [
         {
@@ -265,9 +259,9 @@ const DATA = {
       ]
     },
     ecosystem: {
-      title: ',
-      description: () =><p className="text-white">The OpenExO Ecosystem is a global transformation playground where 400+ exponential thought leaders, innovation coaches, disruption specialists, startup founders and tech industry gurus gather to solve strategic transformation challenges. We partner with ExO entities, accelerators, incubators, tech companies and technology specialists (artificial intelligence, blockchain, augmented & virtual reality, 3D printing, biotechnology, robotics, drones and more).</p>
-        },
+      title: '',
+      description: () =>
+        <p className="text-white">The OpenExO Ecosystem is a global transformation playground where 400+ exponential thought leaders, innovation coaches, disruption specialists, startup founders and tech industry gurus gather to solve strategic transformation challenges. We partner with ExO entities, accelerators, incubators, tech companies and technology specialists (artificial intelligence, blockchain, augmented & virtual reality, 3D printing, biotechnology, robotics, drones and more).</p>
     },
     footer: {
       main: { text: 'OpenExO', url: 'https://www.exolever.com/' },
@@ -309,9 +303,9 @@ class IndexPage extends React.Component<any, State> {
             button={DATA.en.books.button}
           />
 
-          <About
+          {/* <About
             content={DATA.en.about2.features}
-          />
+          /> */}
 
           <Events
             title={DATA.en.events.title}
