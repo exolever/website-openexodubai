@@ -271,37 +271,37 @@ const DATA = {
     ecosystem: {
       title: 'The OpenExO Ecosystem',
       description: () => <p className="text-white">The OpenExO Ecosystem is a global transformation playground where 400+ exponential thought leaders, innovation coaches, disruption specialists, startup founders and tech industry gurus gather to solve strategic transformation challenges. We partner with ExO entities, accelerators, incubators, tech companies and technology specialists (artificial intelligence, blockchain, augmented & virtual reality, 3D printing, biotechnology, robotics, drones and more).</p>
-  },
-  partners: {
-    title: `OpenExO Summit Partners & Sponsors`,
-    sections: [{
-      title: `Platinum Sponsor`,
-      logos: [logo5]
     },
-    {
-      title: `Gold Sponsor`,
-      logos: [logo8]
-    },
-    {
-      title: `Strategic Partners`,
-      logos: [logo1,logo2,logo3,logo4,logo6,logo7]
-    }
+    partners: {
+      title: `OpenExO Summit Partners & Sponsors`,
+      sections: [{
+        title: `Platinum Sponsor`,
+        logos: [logo5]
+      },
+      {
+        title: `Gold Sponsor`,
+        logos: [logo8]
+      },
+      {
+        title: `Strategic Partners`,
+        logos: [logo1, logo2, logo3, logo4, logo6, logo7]
+      }
 
-    ]
-  },
-  footer: {
-    main: { text: 'OpenExO', url: 'https://www.exolever.com/' },
-    links: [
-      { text: 'Exponential Organizations', url: 'https://www.exponentialorgs.com/' },
-      { text: 'Exponential Transformation', url: 'https://www.exponentialtransformationbook.com/' },
-      { text: 'ExO Canvas', url: 'https://www.exocanvas.com/' },
-    ],
-    copyright: (year = new Date().getFullYear()) =>
-      <>
-        Building Exponential Organizations - OpenExO<sup>®</sup> {year} <br /> <small>Copyright &copy; {year} All rights reserved</small>
-      </>
+      ]
+    },
+    footer: {
+      main: { text: 'OpenExO', url: 'https://www.exolever.com/' },
+      links: [
+        { text: 'Exponential Organizations', url: 'https://www.exponentialorgs.com/' },
+        { text: 'Exponential Transformation', url: 'https://www.exponentialtransformationbook.com/' },
+        { text: 'ExO Canvas', url: 'https://www.exocanvas.com/' },
+      ],
+      copyright: (year = new Date().getFullYear()) =>
+        <>
+          Building Exponential Organizations - OpenExO<sup>®</sup> {year} <br /> <small>Copyright &copy; {year} All rights reserved</small>
+        </>
+    }
   }
-}
 };
 class IndexPage extends React.Component<any, State> {
   render() {
@@ -352,20 +352,41 @@ class IndexPage extends React.Component<any, State> {
 
           <Section>
             <div className="row spad text-center">
-            <h2 className="col-lg-12">{DATA.en.partners.title}</h2>
+              <h2 className="col-lg-12">{DATA.en.partners.title}</h2>
             </div>
             <div className="row text-center">
               <h3 className="col-lg-12">{DATA.en.partners.sections[0].title}</h3>
-                {DATA.en.partners.sections[0].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center"src={logo} /></div>)}
+              {DATA.en.partners.sections[0].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
             </div>
             <div className="row text-center">
               <h3 className="col-lg-12">{DATA.en.partners.sections[1].title}</h3>
-                {DATA.en.partners.sections[1].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center"src={logo} /></div>)}
+              {DATA.en.partners.sections[1].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
             </div>
             <div className="row text-center">
-            <h3 className="col-lg-12">{DATA.en.partners.sections[2].title}</h3>
-              {DATA.en.partners.sections[2].logos.map(logo => <div className="col-lg-4 logo-item"><img className="text-center"src={logo} /></div>)}
+              <h3 className="col-lg-12">{DATA.en.partners.sections[2].title}</h3>
+              {DATA.en.partners.sections[2].logos.map(logo => <div className="col-lg-4 logo-item"><img className="text-center" src={logo} /></div>)}
             </div>
+          </Section>
+          <HighlightSection
+              title={`Transformation as a service`}
+              backgroundImage={sectionBgAlt}
+            />
+          <Section>
+            <div className="row">
+            <div className="col-lg-6 text-center">
+            <h3>ExO Sprint</h3>
+            <p>
+            An ExO Sprint is a 10-week process based on the book <a href="https://www.exponentialtransformationbook.com/" target="_blank"><strong><em>Exponential Transformation</em></strong></a> that helps organizations to evolve their business models from scarcity to abundance while dealing with the immune system. The ExO Sprint has been successfully run in large, medium and small organizations around the world. It is designed to rapidly move your organization’s leadership culture and management thinking forward.
+            </p>
+            </div>
+            <div className="col-lg-6 text-center">
+            <h3 >ExO Sprint</h3>
+            <p>ExO On-Demand is a customized product built around flexible access to our ExO Ecosystem members. Consult technology and industry specialists, enhance your strategic offsite with virtual advisors, incubate your disruptive initiatives with exponentially minded people... these are just a few of the ways we can help you if your organization wants to start or has already started a transformation process. </p>
+            </div>
+
+            </div>
+            <div class="text-center">
+            <a target="_blank" class="site-btn text-white" href="https://www.openexo.com/transformation-services">Request a service</a></div>
           </Section>
           <Footer links={DATA.en.footer.links} copyright={DATA.en.footer.copyright} mainLogo={DATA.en.footer.main} />
         </Page>
