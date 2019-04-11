@@ -59,7 +59,7 @@ const DATA = {
         <>
           Are you an exponential organization?<br />
           Are you disrupting or being disrupted?<br />
-          Are you future ready?'
+          Are you future ready?
         </>,
       btnLabel: 'Join the summit',
     },
@@ -67,7 +67,7 @@ const DATA = {
       title: 'TRANSFORM FOR THE FUTURE',
       description: () =>
         <>
-          OpenExO is a Global Transformation Ecosystem helping organizations, institutions and people to transform and unlock abundance<br />
+          <a href="https://www.openexo.com" target="_blank">OpenExO</a> is a Global Transformation Ecosystem helping organizations, institutions and people to transform and unlock abundance<br />
           Have access to disruptive thinking, exponential technology insights and industry leaders
         </>,
       features: [
@@ -83,7 +83,10 @@ const DATA = {
         },
         {
           title: () => <>And navigate<br />disruption</>,
-          description: () => 'We kickstart and accelerate your ideas and initiatives with the help of the OpenExO Ecosystem, converting disruptive stress into disruptive opportunity',
+          description: () =>
+            <>
+              We kickstart and accelerate your ideas and initiatives with the help of the <a href="https://www.openexo.com" target="_blank">OpenExO</a> Ecosystem, converting disruptive stress into disruptive opportunity
+            </>,
           image: icon03
         }
       ]
@@ -249,7 +252,7 @@ const DATA = {
       }
     },
     team: {
-      title: 'The OpenExO Coaches',
+      title: 'The ExO Coaches',
       members: [
         {
           image: francisco,
@@ -285,10 +288,10 @@ const DATA = {
     },
     ecosystem: {
       title: 'The OpenExO Ecosystem',
-      description: () => <p className="text-white">The OpenExO Ecosystem is a global transformation playground where 400+ exponential thought leaders, innovation coaches, disruption specialists, startup founders and tech industry gurus gather to solve strategic transformation challenges. We partner with ExO entities, accelerators, incubators, tech companies and technology specialists (artificial intelligence, blockchain, augmented & virtual reality, 3D printing, biotechnology, robotics, drones and more).</p>
+      description: () => <p className="text-white">The <a href="https://www.openexo.com" target="_blank">OpenExO</a> Ecosystem is a global transformation playground where 400+ exponential thought leaders, innovation coaches, disruption specialists, startup founders and tech industry gurus gather to solve strategic transformation challenges. We partner with ExO entities, accelerators, incubators, tech companies and technology specialists (artificial intelligence, blockchain, augmented & virtual reality, 3D printing, biotechnology, robotics, drones and more).</p>
     },
     partners: {
-      title: `OpenExO Summit Partners & Sponsors`,
+      title: `Dubai ExO Summit Partners & Sponsors`,
       sections: [{
         title: `Platinum Sponsor`,
         logos: [logo5]
@@ -312,7 +315,7 @@ const DATA = {
       ],
       copyright: (year = new Date().getFullYear()) =>
         <>
-          Building Exponential Organizations - OpenExO<sup>®</sup> {year} <br /> <small>Copyright &copy; {year} All rights reserved</small>
+          Building Exponential Organizations - <a href="https://www.openexo.com" target="_blank">OpenExO</a><sup>®</sup> {year} <br /> <small>Copyright &copy; {year} All rights reserved</small>
         </>
     }
   }
