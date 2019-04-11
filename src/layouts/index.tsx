@@ -26,7 +26,10 @@ const meta = [
   { property: "og:description", content: ""},
   { property: "og:image", content: "/social/banner.png"},
   { property: "og:url", content: "http://openexodubai.com/"},
-  { name: "twitter:card", content: "ExO Summit Dubai | Inspire, educate and support leaders of the world for a better future."}
+  { name: "twitter:card", content: "ExO Summit Dubai | Inspire, educate and support leaders of the world for a better future."},
+  { name:"twitter:title", content:"ExO Summit Dubai" },
+  { name:"twitter:image", content: "/social/banner.png" }
+
 ]
 
 
