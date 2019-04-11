@@ -8,10 +8,11 @@ import IndexLayout from '../layouts';
 import LeaderForm from '../components/forms/LeaderForm';
 import About from '../components/About';
 import Books from '../components/Books';
+import Team from '../components/Team';
 
 // import * as sectionBg from '../img/bg-61-img.jpg';
-import * as sectionBg from '../img/bg-summit.jpg';
-import * as sectionBgAlt from '../img/bg-mountain.jpg';
+import * as sectionBg from '../img/main-bg.jpg';
+import * as sectionBgAlt from '../img/sub-bg.jpg';
 
 import * as icon01 from '../img/icon01.png';
 import * as icon02 from '../img/icon02.png';
@@ -19,6 +20,17 @@ import * as icon03 from '../img/icon03.png';
 import * as icon04 from '../img/icon04.png';
 import * as book01 from '../img/book01.png';
 import * as book02 from '../img/book02.png';
+
+import * as emilie from '../img/coaches/emilie.png';
+import * as evonne from '../img/coaches/evonne.png';
+import * as francisco from '../img/coaches/francisco.png';
+import * as luciana from '../img/coaches/luciana-pic.jpg';
+import * as paul from '../img/coaches/paul.png';
+import * as jaroslav from '../img/coaches/jaroslav.png';
+
+
+
+
 
 
 interface State {
@@ -29,14 +41,14 @@ interface State {
 const DATA = {
   en: {
     hero: {
-      title: 'EXO SUMMITS',
+      title: 'EXOSUMMITS DUBAI',
       description: () =>
         <>
           Are you an exponential organization?<br />
           Are you disrupting or being disrupted?<br />
           Are you future ready?'
         </>,
-      btnLabel: 'Create your own Summit',
+      btnLabel: 'Join the summit',
     },
     about: {
       title: 'TRANSFORM FOR THE FUTURE',
@@ -122,6 +134,41 @@ const DATA = {
         error: 'Please try it later, again.'
       }
     },
+    team: {
+      title: 'The OpenExO Coaches',
+      members: [
+        {
+          image: francisco,
+          name: 'Francisco Palao',
+          position: 'Co-Founder - OpenExO'
+        },
+        {
+          image: jaroslav,
+          name: 'Jaroslav Dokupil',
+          position: 'CEO - OpenExO'
+        },
+        {
+          image: emilie,
+          name: 'Emilie Syndney-Smith',
+          position: 'CEO - ExO Works'
+        },
+        {
+          image: paul,
+          name: 'Paul Epping',
+          position: 'Master Disruptor - OpenExO'
+        },
+        {
+          image: luciana,
+          name: 'Luciana Ledesma',
+          position: 'Head ExO Coach'
+        },
+        {
+          image: evonne,
+          name: 'Evonne Heyning',
+          position: 'Director of Corporate Growth - OpenExO'
+        },
+      ]
+    },
     footer: {
       main: { text: 'OpenExO', url: 'https://www.exolever.com/' },
       links: [
@@ -189,6 +236,7 @@ class IndexPage extends React.Component<any, State> {
             fields={DATA.en.form.fields}
             messages={DATA.en.form.messages}
           />
+          <Team className="team-section" title={DATA.en.team.title} members={DATA.en.team.members}></Team>
           <Footer links={DATA.en.footer.links} copyright={DATA.en.footer.copyright} mainLogo={DATA.en.footer.main} />
         </Page>
         <style>
