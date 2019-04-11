@@ -124,14 +124,14 @@ const DATA = {
       }
     },
     events: {
-      title: 'OpenExO Programme',
+      title: 'Program',
       titleBg: bg01,
       image: icon01,
       items: [
         {
-          title: () => <>20th April, 2019 <br /> ExO Summit</>,
+          title: () => <>20th April, 2019 <br /> ExO Summit Dubai</>,
           subtitle: 'Led by Salim Ismail',
-          notes: 'Sessions include Keynote Speecheds and Interactive Workshops Lunch & Refreshments are served',
+          notes: 'Sessions include Keynote Speeches and Interactive Workshops Lunch & Refreshments are served',
           sessions: [
             {
               start: '08:00',
@@ -172,9 +172,9 @@ const DATA = {
               title: 'AM - Special 1-2-1 Meeting',
               subtitle: 'Exclusive to Pre-Approved Delegates Only',
               sessions: [
-                'Salim Lsmail dedicates 1 hour to your company transformation, foloowed by a 2 hour personalised workshop with an Expert ExO coach',
+                'Salim Lsmail dedicates 1 hour to your company transformation, followed by a 2 hour personalised workshop with an Expert ExO coach',
                 'This is an exclusive session, open to only 6 companies on a first-come first-serve basis, with a maximum of 5 delegates per company',
-                'All requests to join this special session, must be made in advance to allocate appropriate time sheduling'
+                'All requests to join this special session, must be made in advance to allocate appropriate time scheduling'
               ]
             },
             {
@@ -206,13 +206,13 @@ const DATA = {
           sessions: [
             {
               start: '17:00',
-              title: 'Launch of ExO Summitt in the Middle East, Boook-signing and Fireside chat between Futurist Tariq Querishy and Thought Leader Salim Ismail & follwed by Live Debate with Industry Leaders and Global Organisations',
+              title: 'Launch of ExO Summit in the Middle East, Book-signing and Fireside chat between Futurist Tariq Querishy and Thought Leader Salim Ismail & followed by Live Debate with Industry Leaders and Global Organisations',
             },
           ]
         },
       ],
       button: {
-        label: 'CONTACT US TO BE A PART OF ExO Summit',
+        label: 'CONTACT US TO BE A PART OF ExO Summit Dubai',
         url: 'mailto:marketing@madtalks.com'
       }
     },
@@ -323,7 +323,7 @@ class IndexPage extends React.Component<any, State> {
       <IndexLayout>
         <Page>
           <Hero
-            title="ExO Summit"
+            title="ExO Summit Dubai"
             subtitle={DATA.en.hero.description()}
             backgroundImage={sectionBg}
             cta={{ text: DATA.en.hero.btnLabel, target: '#submit' }}
