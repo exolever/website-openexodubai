@@ -1,8 +1,7 @@
 {
-  "name": "website-exosummits",
+  "name": "website-exosummitsdubai",
   "alias": [
-    "exosummits.now.sh",
-    "summits.openexo.com"
+    "openexodubai.now.sh"
   ],
   "github": {
     "enabled": true,
