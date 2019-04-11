@@ -30,8 +30,18 @@ import * as francisco from '../img/coaches/francisco.png';
 import * as luciana from '../img/coaches/luciana-pic.jpg';
 import * as paul from '../img/coaches/paul.png';
 import * as jaroslav from '../img/coaches/jaroslav.png';
-import Section from '../components/Team';
+import Section from '../components/Section';
 import HighlightSection from '../components/HighlightSection';
+
+import * as logo0 from '../img/logo/0.jpg';
+import * as logo1 from '../img/logo/1.jpg';
+import * as logo2 from '../img/logo/2.jpg';
+import * as logo3 from '../img/logo/3.jpg';
+import * as logo4 from '../img/logo/4.jpg';
+import * as logo5 from '../img/logo/5.jpg';
+import * as logo6 from '../img/logo/6.jpg';
+import * as logo7 from '../img/logo/7.jpg';
+import * as logo8 from '../img/logo/8.jpg';
 
 interface State {
   style: {
@@ -259,23 +269,39 @@ const DATA = {
       ]
     },
     ecosystem: {
-      title: '',
-      description: () =>
-        <p className="text-white">The OpenExO Ecosystem is a global transformation playground where 400+ exponential thought leaders, innovation coaches, disruption specialists, startup founders and tech industry gurus gather to solve strategic transformation challenges. We partner with ExO entities, accelerators, incubators, tech companies and technology specialists (artificial intelligence, blockchain, augmented & virtual reality, 3D printing, biotechnology, robotics, drones and more).</p>
+      title: 'The OpenExO Ecosystem',
+      description: () => <p className="text-white">The OpenExO Ecosystem is a global transformation playground where 400+ exponential thought leaders, innovation coaches, disruption specialists, startup founders and tech industry gurus gather to solve strategic transformation challenges. We partner with ExO entities, accelerators, incubators, tech companies and technology specialists (artificial intelligence, blockchain, augmented & virtual reality, 3D printing, biotechnology, robotics, drones and more).</p>
+  },
+  partners: {
+    title: `OpenExO Summit Partners & Sponsors`,
+    sections: [{
+      title: `Platinum Sponsor`,
+      logos: [logo5]
     },
-    footer: {
-      main: { text: 'OpenExO', url: 'https://www.exolever.com/' },
-      links: [
-        { text: 'Exponential Organizations', url: 'https://www.exponentialorgs.com/' },
-        { text: 'Exponential Transformation', url: 'https://www.exponentialtransformationbook.com/' },
-        { text: 'ExO Canvas', url: 'https://www.exocanvas.com/' },
-      ],
-      copyright: (year = new Date().getFullYear()) =>
-        <>
-          Building Exponential Organizations - OpenExO<sup>®</sup> {year} <br /> <small>Copyright &copy; {year} All rights reserved</small>
-        </>
+    {
+      title: `Gold Sponsor`,
+      logos: [logo8]
+    },
+    {
+      title: `Strategic Partners`,
+      logos: [logo1,logo2,logo3,logo4,logo6,logo7]
     }
+
+    ]
+  },
+  footer: {
+    main: { text: 'OpenExO', url: 'https://www.exolever.com/' },
+    links: [
+      { text: 'Exponential Organizations', url: 'https://www.exponentialorgs.com/' },
+      { text: 'Exponential Transformation', url: 'https://www.exponentialtransformationbook.com/' },
+      { text: 'ExO Canvas', url: 'https://www.exocanvas.com/' },
+    ],
+    copyright: (year = new Date().getFullYear()) =>
+      <>
+        Building Exponential Organizations - OpenExO<sup>®</sup> {year} <br /> <small>Copyright &copy; {year} All rights reserved</small>
+      </>
   }
+}
 };
 class IndexPage extends React.Component<any, State> {
   render() {
@@ -294,7 +320,7 @@ class IndexPage extends React.Component<any, State> {
             title={DATA.en.about.title}
             description={DATA.en.about.description}
             content={DATA.en.about.features}
-            />
+          />
 
           <Books
             title={DATA.en.books.title}
@@ -303,9 +329,6 @@ class IndexPage extends React.Component<any, State> {
             button={DATA.en.books.button}
           />
 
-          {/* <About
-            content={DATA.en.about2.features}
-          /> */}
 
           <Events
             title={DATA.en.events.title}
@@ -313,7 +336,6 @@ class IndexPage extends React.Component<any, State> {
             content={DATA.en.events.items}
             button={DATA.en.events.button}
           />
-
           <LeaderForm
             formBg={sectionBgAlt}
             title={DATA.en.form.title()}
@@ -324,9 +346,27 @@ class IndexPage extends React.Component<any, State> {
           <Team className="team-section" title={DATA.en.team.title} members={DATA.en.team.members}></Team>
           <HighlightSection title={DATA.en.ecosystem.title} backgroundImage={mapBgAlt} className="ecosystem">
             <div className="text-center">
-              {DATA.en.ecosystem.description}
+              {DATA.en.ecosystem.description()}
             </div>
           </HighlightSection>
+
+          <Section>
+            <div className="row spad text-center">
+            <h2 className="col-lg-12">{DATA.en.partners.title}</h2>
+            </div>
+            <div className="row text-center">
+              <h3 className="col-lg-12">{DATA.en.partners.sections[0].title}</h3>
+                {DATA.en.partners.sections[0].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center"src={logo} /></div>)}
+            </div>
+            <div className="row text-center">
+              <h3 className="col-lg-12">{DATA.en.partners.sections[1].title}</h3>
+                {DATA.en.partners.sections[1].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center"src={logo} /></div>)}
+            </div>
+            <div className="row text-center">
+            <h3 className="col-lg-12">{DATA.en.partners.sections[2].title}</h3>
+              {DATA.en.partners.sections[2].logos.map(logo => <div className="col-lg-4 logo-item"><img className="text-center"src={logo} /></div>)}
+            </div>
+          </Section>
           <Footer links={DATA.en.footer.links} copyright={DATA.en.footer.copyright} mainLogo={DATA.en.footer.main} />
         </Page>
         <style>
