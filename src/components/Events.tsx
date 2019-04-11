@@ -11,7 +11,7 @@ interface Session {
 interface SessionGroup {
   title: string;
   subtitle: string;
-  sessions: Session[] | string[];
+  sessions: Session[] | string[] | any[];
 }
 
 interface Event {

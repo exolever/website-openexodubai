@@ -8,10 +8,16 @@ interface Column {
   image?: any;
 }
 
+interface Button {
+  label: string;
+  url: string;
+}
+
 interface Props {
   title?: any;
   description?: any;
-  content?: Column[]
+  content?: Column[];
+  button?: Button;
 }
 
 const Vertical = ({ title, description, image, column }) =>
@@ -35,7 +41,7 @@ const Horizontal = ({ title, description, image }) =>
       </div>}
   </div>;
 
-const About: React.SFC<Props> = ({ title, description, content = [] }) => {
+const About: React.SFC<Props> = ({ title, description, content = [], button }) => {
   const column = Math.floor(12 / content.length);
   return (
     <Section className="about-section">
@@ -54,6 +60,10 @@ const About: React.SFC<Props> = ({ title, description, content = [] }) => {
             return horizontal ?
               <Horizontal {...props} key={index} /> : <Vertical {...props} key={index} />
           })}
+        </div>}
+      {button &&
+        <div className="text-center">
+          <a target="_blank" className="site-btn text-white" href={button.url}>{button.label}</a>
         </div>}
     </Section>
   )

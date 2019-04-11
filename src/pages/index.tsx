@@ -258,6 +258,7 @@ const DATA = {
     },
     team: {
       title: 'The ExO Coaches',
+      titleBg: bg01,
       members: [
         {
           image: salim,
@@ -362,6 +363,7 @@ class IndexPage extends React.Component<any, State> {
 
           <About
             content={DATA.en.about2.features}
+            button={DATA.en.about2.button}
           />
 
           <Video
@@ -376,7 +378,12 @@ class IndexPage extends React.Component<any, State> {
             description={DATA.en.about3.description}
           />
 
-          <Team className="team-section" title={DATA.en.team.title} members={DATA.en.team.members}></Team>
+          <Team
+            className="team-section"
+            title={DATA.en.team.title}
+            titleBg={DATA.en.team.titleBg}
+            members={DATA.en.team.members}
+          />
 
           <Events
             titleBg={DATA.en.events.titleBg}
@@ -385,11 +392,19 @@ class IndexPage extends React.Component<any, State> {
             title={DATA.en.events.title}
           />
 
-          <Ecosystem title={DATA.en.ecosystem.title} description={DATA.en.ecosystem.description()} backgroundImage={mapBgAlt} />
+          <Ecosystem
+            title={DATA.en.ecosystem.title}
+            description={DATA.en.ecosystem.description()}
+            backgroundImage={mapBgAlt}
+          />
 
-          <Partners title={DATA.en.partners.title} sections={DATA.en.partners.sections} />
+          <Partners
+            title={DATA.en.partners.title}
+            sections={DATA.en.partners.sections}
+          />
 
           <Services backgroundImage={sectionBgAlt} />
+
           <LeaderForm
               formBg={contactBg}
               title={DATA.en.form.title()}
