@@ -3,8 +3,8 @@ import Section from '../components/Section';
 import HighlightSection from '../components/HighlightSection';
 
 interface Session {
-  start: string;
-  end: string;
+  start?: string;
+  end?: string;
   title: string;
 }
 
