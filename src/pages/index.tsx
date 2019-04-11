@@ -8,6 +8,7 @@ import IndexLayout from '../layouts';
 import LeaderForm from '../components/forms/LeaderForm';
 import About from '../components/About';
 import Books from '../components/Books';
+import Events from '../components/Events';
 import Team from '../components/Team';
 
 // import * as sectionBg from '../img/bg-61-img.jpg';
@@ -15,7 +16,6 @@ import * as sectionBg from '../img/main-bg.jpg';
 import * as sectionBgAlt from '../img/sub-bg.jpg';
 import * as mapBg from '../img/map.jpg';
 import * as mapBgAlt from '../img/map-alt.jpg';
-
 
 import * as icon01 from '../img/icon01.png';
 import * as icon02 from '../img/icon02.png';
@@ -33,7 +33,6 @@ import * as jaroslav from '../img/coaches/jaroslav.png';
 import Section from '../components/Section';
 import HighlightSection from '../components/HighlightSection';
 
-
 import * as logo0 from '../img/logo/0.jpg';
 import * as logo1 from '../img/logo/1.jpg';
 import * as logo2 from '../img/logo/2.jpg';
@@ -43,13 +42,6 @@ import * as logo5 from '../img/logo/5.jpg';
 import * as logo6 from '../img/logo/6.jpg';
 import * as logo7 from '../img/logo/7.jpg';
 import * as logo8 from '../img/logo/8.jpg';
-
-
-
-
-
-
-
 
 interface State {
   style: {
@@ -77,17 +69,17 @@ const DATA = {
         </>,
       features: [
         {
-          title: 'We do this by helping clients',
+          title: () => <>We do this <br />by helping clients</>,
           description: () => 'Fortune 500 businesses, small and medium sized businesses, cities of one million or more citizens, inspired individuals and community leaders',
           image: icon01
         },
         {
-          title: 'Connect with the right transformation services',
+          title: () => <>Connect with the right<br />transformation services</>,
           description: () => 'Exponential Organizations (ExO) Sprints and On-Demand Services in the industry, technology or area of expertise you need',
           image: icon02
         },
         {
-          title: 'And navigate  disruption',
+          title: () => <>And navigate<br />disruption</>,
           description: () => 'We kickstart and accelerate your ideas and initiatives with the help of the OpenExO Ecosystem, converting disruptive stress into disruptive opportunity',
           image: icon03
         }
@@ -95,7 +87,7 @@ const DATA = {
     },
     books: {
       title: 'TRANSFORMATION AS A SERVICE',
-      titleBg: '/imgs/bg01.jpg',
+      titleBg: '/imgs/bg02.png',
       features: [
         {
           title: 'WHY do I need to transform?',
@@ -111,22 +103,111 @@ const DATA = {
         url: 'mailto:marketing@madtalks.com'
       }
     },
-    about2: {
-      features: [
+    // about2: {
+    //   features: [
+    //     {
+    //       description: () =>
+    //         <>
+    //           ExO Summits inspires, educates and supports; leaders, intrapreneurs and entrepreneurs worldwide to get started with transformation journeys.<br />
+    //           Transform from a traditional to an exponential operating model by moving away from a scarcity mindset towards one based on abundance. <br />
+    //           By understanding and applying the ExO framework to your organization you'll tap into growth by a factor of 10x.<br />
+    //           Be the first to learn about upcoming summits or organize a summit yourself
+    //         </>,
+    //       image: icon04
+    //     },
+    //   ],
+    //   button: {
+    //     label: 'LEARN MORE',
+    //     url: 'https://storage.googleapis.com/wzukusers/user-34745225/documents/5c987a606437dxmlkMHz/OpenExO%20Final.pdf'
+    //   }
+    // },
+    events: {
+      title: 'OpenExO Programme',
+      titleBg: '/imgs/bg01.jpg',
+      image: icon01,
+      items: [
         {
-          description: () =>
-            <>
-              ExO Summits inspires, educates and supports; leaders, intrapreneurs and entrepreneurs worldwide to get started with transformation journeys.<br />
-              Transform from a traditional to an exponential operating model by moving away from a scarcity mindset towards one based on abundance. <br />
-              By understanding and applying the ExO framework to your organization you'll tap into growth by a factor of 10x.<br />
-              Be the first to learn about upcoming summits or organize a summit yourself
-            </>,
-          image: icon04
+          title: () => <>20th April, 2019 <br /> ExO Summit</>,
+          subtitle: 'Led by Salim Ismail',
+          notes: 'Sessions include Keynote Speecheds and Interactive Workshops Lunch & Refreshments are served',
+          sessions: [
+            {
+              start: '08:00',
+              end: '09:00',
+              title: 'Registration and Networking Breakfast',
+            },
+            {
+              start: '08:00',
+              end: '09:00',
+              title: 'Registration and Networking Breakfast',
+            },
+            {
+              start: '08:00',
+              end: '09:00',
+              title: 'Registration and Networking Breakfast',
+            },
+          ]
+        },
+        {
+          title: () => <>20th April, 2019</>,
+          sessionGroup: [
+            {
+              title: 'AM - Special 1-2-1 Meeting',
+              subtitle: 'Exclusive to Pre-Approved Delegates Only',
+              sessions: [
+                'Salim Lsmail dedicates 1 hour to your company transformation, foloowed by a 2 hour personalised workshop with an Expert ExO coach',
+                'This is an exclusive session, open to only 6 companies on a first-come first-serve basis, with a maximum of 5 delegates per company',
+                'All requests to join this special session, must be made in advance to allocate appropriate time sheduling'
+              ]
+            },
+            {
+              title: 'PM - VIP Dinner Reception',
+              subtitle: 'By Invitation Only',
+              sessions: [
+                {
+                  start: '08:00',
+                  end: '09:00',
+                  title: 'Registration and Networking Breakfast',
+                },
+                {
+                  start: '08:00',
+                  end: '09:00',
+                  title: 'Registration and Networking Breakfast',
+                },
+                {
+                  start: '08:00',
+                  end: '09:00',
+                  title: 'Registration and Networking Breakfast',
+                },
+              ]
+            },
+          ]
+        },
+        {
+          title: () => <>20th April, 2019 <br /> ExO Summit</>,
+          subtitle: 'Led by Salim Ismail',
+          sessions: [
+            {
+              start: '08:00',
+              end: '09:00',
+              title: 'Registration and Networking Breakfast',
+            },
+            {
+              start: '08:00',
+              end: '09:00',
+              title: 'Registration and Networking Breakfast',
+            },
+            {
+              start: '08:00',
+              end: '09:00',
+              title: 'Registration and Networking Breakfast',
+            },
+          ]
         },
       ],
       button: {
-        label: 'LEARN MORE',
-        url: 'https://storage.googleapis.com/wzukusers/user-34745225/documents/5c987a606437dxmlkMHz/OpenExO%20Final.pdf'
+        label: 'CONTACT US TO BE A PART OF ExO Summit',
+        url: 'mailto:marketing@madtalks.com'
       }
     },
     form: {
@@ -248,26 +329,13 @@ class IndexPage extends React.Component<any, State> {
             button={DATA.en.books.button}
           />
 
-          <About
-            content={DATA.en.about2.features}
-          />
-          <div className="pricing-plan">
-            <div className="pricing-title">
-              <h4>Basic Plan</h4>
-            </div>
-            <div className="pricing-body">
-              <h2>20th April, 2019</h2>
-              <ul>
-                <li><span>08:00 - 09:00</span><br /><strong>Registartion and Networking Breakfast</strong></li>
-                <li>3GB bandwidth</li>
-                <li>Free Email Addresses</li>
-                <li>24/7 security monitoring</li>
-                <li>24/7 technical support</li>
-              </ul>
-              <a href="" className="site-btn">Get Plan</a>
-            </div>
-          </div>
 
+          <Events
+            title={DATA.en.events.title}
+            titleBg={DATA.en.events.titleBg}
+            content={DATA.en.events.items}
+            button={DATA.en.events.button}
+          />
           <LeaderForm
             formBg={sectionBgAlt}
             title={DATA.en.form.title()}
