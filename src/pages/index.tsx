@@ -367,7 +367,14 @@ class IndexPage extends React.Component<any, State> {
           <Partners title={DATA.en.partners.title} sections={DATA.en.partners.sections} />
 
           <Services backgroundImage={sectionBgAlt} />
-
+          <LeaderForm
+              formBg={contactBg}
+              title={DATA.en.form.title()}
+              description={DATA.en.form.description()}
+              labels={DATA.en.form.labels}
+              fields={DATA.en.form.fields}
+              messages={DATA.en.form.messages}
+            />
           <Footer links={DATA.en.footer.links} copyright={DATA.en.footer.copyright} mainLogo={DATA.en.footer.main} />
         </Page>
         <style>
