@@ -276,15 +276,15 @@ const DATA = {
     title: `OpenExO Summit Partners & Sponsors`,
     sections: [{
       title: `Platinum Sponsor`,
-      logos: [logo6]
+      logos: [logo5]
     },
     {
       title: `Gold Sponsor`,
-      logos: [logo0]
+      logos: [logo8]
     },
     {
       title: `Strategic Partners`,
-      logos: [logo1,logo2,logo3,logo4,logo5,logo6,logo7]
+      logos: [logo1,logo2,logo3,logo4,logo6,logo7]
     }
 
     ]
@@ -356,11 +356,11 @@ class IndexPage extends React.Component<any, State> {
             </div>
             <div className="row text-center">
               <h3 className="col-lg-12">{DATA.en.partners.sections[0].title}</h3>
-                {DATA.en.partners.sections[0].logos.map(logo => <div className="col-lg-4 logo-item"><img className="text-center"src={logo} /></div>)}
+                {DATA.en.partners.sections[0].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center"src={logo} /></div>)}
             </div>
             <div className="row text-center">
               <h3 className="col-lg-12">{DATA.en.partners.sections[1].title}</h3>
-                {DATA.en.partners.sections[1].logos.map(logo => <div className="col-lg-4 logo-item"><img className="text-center"src={logo} /></div>)}
+                {DATA.en.partners.sections[1].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center"src={logo} /></div>)}
             </div>
             <div className="row text-center">
             <h3 className="col-lg-12">{DATA.en.partners.sections[2].title}</h3>
