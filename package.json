@@ -51,6 +51,7 @@
     "jsonp": "^0.2.1",
     "modern-normalize": "^0.5.0",
     "normalize.css": "^8.0.0",
+    "now": "^15.0.3",
     "polished": "^2.0.3",
     "prism-themes": "^1.0.1",
     "prismjs": "^1.15.0",
