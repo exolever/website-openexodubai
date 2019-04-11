@@ -1822,7 +1822,7 @@ ol {
 .mc_embed_signup div.mce-responses {margin-bottom: 6%; font-weight: bold;}
 
 .core-logo {
-	width: 100px;
+	width: 180px;
 	margin: 24px 0px;
 }
 .subscribe-msg {
@@ -1953,3 +1953,7 @@ a:hover {
 }
 
 
+.ecosystem {
+	height: 70vh;
+	background-position: bottom;
+}

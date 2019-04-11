@@ -13,6 +13,9 @@ import Team from '../components/Team';
 // import * as sectionBg from '../img/bg-61-img.jpg';
 import * as sectionBg from '../img/main-bg.jpg';
 import * as sectionBgAlt from '../img/sub-bg.jpg';
+import * as mapBg from '../img/map.jpg';
+import * as mapBgAlt from '../img/map-alt.jpg';
+
 
 import * as icon01 from '../img/icon01.png';
 import * as icon02 from '../img/icon02.png';
@@ -27,6 +30,8 @@ import * as francisco from '../img/coaches/francisco.png';
 import * as luciana from '../img/coaches/luciana-pic.jpg';
 import * as paul from '../img/coaches/paul.png';
 import * as jaroslav from '../img/coaches/jaroslav.png';
+import Section from '../components/Team';
+import HighlightSection from '../components/HighlightSection';
 
 
 
@@ -169,6 +174,11 @@ const DATA = {
         },
       ]
     },
+    ecosystem: {
+      title: ',
+      description: () =><p className="text-white">The OpenExO Ecosystem is a global transformation playground where 400+ exponential thought leaders, innovation coaches, disruption specialists, startup founders and tech industry gurus gather to solve strategic transformation challenges. We partner with ExO entities, accelerators, incubators, tech companies and technology specialists (artificial intelligence, blockchain, augmented & virtual reality, 3D printing, biotechnology, robotics, drones and more).</p>
+        },
+    },
     footer: {
       main: { text: 'OpenExO', url: 'https://www.exolever.com/' },
       links: [
@@ -237,6 +247,11 @@ class IndexPage extends React.Component<any, State> {
             messages={DATA.en.form.messages}
           />
           <Team className="team-section" title={DATA.en.team.title} members={DATA.en.team.members}></Team>
+          <HighlightSection title={DATA.en.ecosystem.title} backgroundImage={mapBgAlt} className="ecosystem">
+            <div className="text-center">
+              {DATA.en.ecosystem.description}
+            </div>
+          </HighlightSection>
           <Footer links={DATA.en.footer.links} copyright={DATA.en.footer.copyright} mainLogo={DATA.en.footer.main} />
         </Page>
         <style>
