@@ -10,12 +10,16 @@ import About from '../components/About';
 import Books from '../components/Books';
 import Events from '../components/Events';
 import Team from '../components/Team';
+import Video from '../components/Video';
+import HighlightSection from '../components/HighlightSection';
 
 // import * as sectionBg from '../img/bg-61-img.jpg';
 import * as sectionBg from '../img/main-bg.jpg';
 import * as sectionBgAlt from '../img/sub-bg.jpg';
 import * as mapBg from '../img/map.jpg';
 import * as mapBgAlt from '../img/map-alt.jpg';
+import * as bg01 from '../img/bg01.jpg';
+import * as bg02 from '../img/bg02.png';
 
 import * as icon01 from '../img/icon01.png';
 import * as icon02 from '../img/icon02.png';
@@ -30,8 +34,7 @@ import * as francisco from '../img/coaches/francisco.png';
 import * as luciana from '../img/coaches/luciana-pic.jpg';
 import * as paul from '../img/coaches/paul.png';
 import * as jaroslav from '../img/coaches/jaroslav.png';
-import Section from '../components/Team';
-import HighlightSection from '../components/HighlightSection';
+import * as Salimi from '../img/Salimi.png';
 
 interface State {
   style: {
@@ -77,7 +80,7 @@ const DATA = {
     },
     books: {
       title: 'TRANSFORMATION AS A SERVICE',
-      titleBg: '/imgs/bg02.png',
+      titleBg: bg02,
       features: [
         {
           title: 'WHY do I need to transform?',
@@ -93,27 +96,26 @@ const DATA = {
         url: 'mailto:marketing@madtalks.com'
       }
     },
-    // about2: {
-    //   features: [
-    //     {
-    //       description: () =>
-    //         <>
-    //           ExO Summits inspires, educates and supports; leaders, intrapreneurs and entrepreneurs worldwide to get started with transformation journeys.<br />
-    //           Transform from a traditional to an exponential operating model by moving away from a scarcity mindset towards one based on abundance. <br />
-    //           By understanding and applying the ExO framework to your organization you'll tap into growth by a factor of 10x.<br />
-    //           Be the first to learn about upcoming summits or organize a summit yourself
-    //         </>,
-    //       image: icon04
-    //     },
-    //   ],
-    //   button: {
-    //     label: 'LEARN MORE',
-    //     url: 'https://storage.googleapis.com/wzukusers/user-34745225/documents/5c987a606437dxmlkMHz/OpenExO%20Final.pdf'
-    //   }
-    // },
+    about2: {
+      features: [
+        {
+          description: () =>
+            <>
+              ExO Summits inspires, educates and supports; leaders, intrapreneurs and entrepreneurs worldwide to get started with transformation journeys.<br />
+              Transform from a traditional to an exponential operating model by moving away from a scarcity mindset towards one based on abundance. <br />
+              By understanding and applying the ExO framework to your organization you'll tap into growth by a factor of 10x.<br />
+              Be the first to learn about upcoming summits or organize a summit yourself
+            </>,
+        },
+      ],
+      button: {
+        label: 'LEARN MORE',
+        url: 'https://storage.googleapis.com/wzukusers/user-34745225/documents/5c987a606437dxmlkMHz/OpenExO%20Final.pdf'
+      }
+    },
     events: {
       title: 'OpenExO Programme',
-      titleBg: '/imgs/bg01.jpg',
+      titleBg: bg01,
       image: icon01,
       items: [
         {
@@ -198,6 +200,15 @@ const DATA = {
       button: {
         label: 'CONTACT US TO BE A PART OF ExO Summit',
         url: 'mailto:marketing@madtalks.com'
+      }
+    },
+    video: {
+      title: 'Salim\'s message is that "If you\'re not disrupting your own business or industry, then someone else already is."',
+      image: Salimi,
+      backgroundImage: bg02,
+      button: {
+        label: 'VIDEO: SALIM ISMAIL - TEDx',
+        url: 'https://www.youtube.com/watch?v=mV0oKVOIGG4'
       }
     },
     form: {
@@ -303,15 +314,22 @@ class IndexPage extends React.Component<any, State> {
             button={DATA.en.books.button}
           />
 
-          {/* <About
+          <About
             content={DATA.en.about2.features}
-          /> */}
+          />
 
           <Events
             title={DATA.en.events.title}
             titleBg={DATA.en.events.titleBg}
             content={DATA.en.events.items}
             button={DATA.en.events.button}
+          />
+
+          <Video
+            title={DATA.en.video.title}
+            image={DATA.en.video.image}
+            backgroundImage={DATA.en.video.backgroundImage}
+            button={DATA.en.video.button}
           />
 
           <LeaderForm
@@ -321,7 +339,9 @@ class IndexPage extends React.Component<any, State> {
             fields={DATA.en.form.fields}
             messages={DATA.en.form.messages}
           />
+          
           <Team className="team-section" title={DATA.en.team.title} members={DATA.en.team.members}></Team>
+
           <HighlightSection title={DATA.en.ecosystem.title} backgroundImage={mapBgAlt} className="ecosystem">
             <div className="text-center">
               {DATA.en.ecosystem.description}
