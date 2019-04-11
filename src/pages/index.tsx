@@ -40,7 +40,7 @@ const DATA = {
     },
     about: {
       title: 'TRANSFORM FOR THE FUTURE',
-      description: () => 
+      description: () =>
         <>
           OpenExO is a Global Transformation Ecosystem helping organizations, institutions and people to transform and unlock abundance<br />
           Have access to disruptive thinking, exponential technology insights and industry leaders
@@ -165,6 +165,22 @@ class IndexPage extends React.Component<any, State> {
           <About
             content={DATA.en.about2.features}
           />
+          <div className="pricing-plan">
+						<div className="pricing-title">
+							<h4>Basic Plan</h4>
+						</div>
+						<div className="pricing-body">
+							<h2>20th April, 2019</h2>
+							<ul>
+								<li><span>08:00 - 09:00</span><br/><strong>Registartion and Networking Breakfast</strong></li>
+								<li>3GB bandwidth</li>
+								<li>Free Email Addresses</li>
+								<li>24/7 security monitoring</li>
+								<li>24/7 technical support</li>
+							</ul>
+							<a href="" className="site-btn">Get Plan</a>
+						</div>
+					</div>
 
           <LeaderForm
             formBg={sectionBgAlt}
