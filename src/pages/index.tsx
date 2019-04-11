@@ -59,7 +59,7 @@ const DATA = {
         <>
           Are you an exponential organization?<br />
           Are you disrupting or being disrupted?<br />
-          Are you future ready?'
+          Are you future ready?
         </>,
       btnLabel: 'Join the summit',
     },
