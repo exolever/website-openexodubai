@@ -11,9 +11,28 @@ interface Props {
   image?: string;
   backgroundImage: string;
 }
-const Logo = styled.img`
+
+const Logo = styled.div`
+  position: relative;
+`;
+
+const LogoImg = styled.img`
   margin-bottom: 24px;
-`
+`;
+
+const LogoLink = styled.a`
+  display: block;
+  position: absolute;
+  right: 147px;
+  bottom: 17px;
+  width: 134px;
+  height: 40px;
+  overflow: hidden;
+  text-indent: 200%;
+  white-space: nowrap;
+`;
+
+
 const Hero: React.SFC<Props> = ({ title, subtitle, cta, image, backgroundImage }) => {
 
   const ContainerWithBackgroundImage = styled.section`
@@ -29,7 +48,10 @@ const Hero: React.SFC<Props> = ({ title, subtitle, cta, image, backgroundImage }
         <div className="hero-content text-white">
           <div className="row">
             <div className="logo-center text-center">
-              <Logo src="/social/logo.svg" alt="exo summit"/>
+              <Logo>
+                <LogoImg src="/social/logo.svg" alt="exo summit"/>
+                <LogoLink href="http://www.openexo.com" target="_blank">OpenExO</LogoLink>
+              </Logo>
               <p>{subtitle}</p>
               <a href={cta.target} className="site-btn ghost">{cta.text}</a>
             </div>
