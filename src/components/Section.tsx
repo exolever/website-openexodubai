@@ -8,7 +8,7 @@ interface Props {
 const Section: React.SFC<Props> = ({ className, children }) => {
 
   return (
-    <section className={`spad ${className}`}>
+    <section className={`spad ${className ? className : ''}`}>
       <div className="container">
         {children}
       </div>

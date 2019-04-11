@@ -15,11 +15,12 @@ import Services from '../components/Services';
 import Partners from '../components/Partners';
 import Ecosystem from '../components/Ecosystem';
 
-// import * as sectionBg from '../img/bg-61-img.jpg';
 import * as sectionBg from '../img/main-bg.jpg';
 import * as sectionBgAlt from '../img/sub-bg.jpg';
-// import * as mapBg from '../img/map.jpg';
 import * as mapBgAlt from '../img/map-alt.jpg';
+import * as contactBg from '../img/bg-contact.jpg';
+
+
 import * as bg01 from '../img/bg01.jpg';
 import * as bg02 from '../img/bg02.png';
 import * as icon01 from '../img/icon01.png';
@@ -225,25 +226,25 @@ const DATA = {
       }
     },
     form: {
-      title: () => <>Organize a summit in your country</>,
+      title: () => <>CONTACT</>,
+      description: () => (<div className="rich-text-content common-rich-content-style has-content"><div><strong>G-02, DMC Building 5, Dubai Media City, P.O.Box # 502126, Dubai, UAE</strong></div><div><br/></div><div><strong>Phone: </strong>+971 55 229 7000</div><div><br/></div><div>If you have&nbsp;any questions, please do not hesitate to send us a message. We will&nbsp;reply within 24 hours.<br/></div><div><br/></div><div><br/></div></div>),
       labels: {
-        required: 'indicates required',
+          required: 'indicates required',
         email: 'Email Address',
         name: 'Name',
-        location: 'Preferred Location of Summit',
-        dates: 'Dates of the summit',
-        description: 'Why would you like to host this summit?',
-        linkedIn: 'LinkedIn URL',
-        button: 'Create summit'
+        subject: `Subject`,
+        phone: `Phone`,
+        description: 'Would you like to be a part of OpenExO?',
+        button: 'Submit'
       },
       fields: {
-        groups: [
-          { id: 8192, hidden: true },
-        ],
-        groupTitle: 'I want to know about:',
-      },
+          groups: [
+          {id: 8192, hidden: true },
+      ],
+      groupTitle: 'I want to know about:',
+    },
       messages: {
-        success: 'Thanks for sending your summit info!',
+          success: 'Thanks for sending your summit info!',
         error: 'Please try it later, again.'
       }
     },
@@ -291,24 +292,23 @@ const DATA = {
       sections: [{
         title: `Platinum Sponsor`,
         logos: [logo5]
-      },
-      {
-        title: `Gold Sponsor`,
-        logos: [logo8]
-      },
-      {
-        title: `Strategic Partners`,
-        logos: [logo1, logo2, logo3, logo4, logo6, logo7]
-      }
-
+        },
+        {
+          title: `Gold Sponsor`,
+          logos: [logo8]
+        },
+        {
+          title: `Strategic Partners`,
+          logos: [logo1, logo2, logo3, logo4, logo6, logo7]
+        }
       ]
     },
     footer: {
-      main: { text: 'OpenExO', url: 'https://www.exolever.com/' },
+      main: {text: 'OpenExO', url: 'https://www.exolever.com/' },
       links: [
-        { text: 'Exponential Organizations', url: 'https://www.exponentialorgs.com/' },
-        { text: 'Exponential Transformation', url: 'https://www.exponentialtransformationbook.com/' },
-        { text: 'ExO Canvas', url: 'https://www.exocanvas.com/' },
+        {text: 'Exponential Organizations', url: 'https://www.exponentialorgs.com/' },
+        {text: 'Exponential Transformation', url: 'https://www.exponentialtransformationbook.com/' },
+        {text: 'ExO Canvas', url: 'https://www.exocanvas.com/' },
       ],
       copyright: (year = new Date().getFullYear()) =>
         <>
@@ -320,14 +320,13 @@ const DATA = {
 class IndexPage extends React.Component<any, State> {
   render() {
     return (
-
       <IndexLayout>
         <Page>
           <Hero
             title="ExO Summit"
             subtitle={DATA.en.hero.description()}
             backgroundImage={sectionBg}
-            cta={{ text: DATA.en.hero.btnLabel, target: '#community' }}
+            cta={{ text: DATA.en.hero.btnLabel, target: '#submit' }}
           />
 
           <About
@@ -347,29 +346,21 @@ class IndexPage extends React.Component<any, State> {
             content={DATA.en.about2.features}
           />
 
-          <Events
-            title={DATA.en.events.title}
-            titleBg={DATA.en.events.titleBg}
-            content={DATA.en.events.items}
-            button={DATA.en.events.button}
-          />
-
           <Video
             title={DATA.en.video.title}
-            image={DATA.en.video.image}
             backgroundImage={DATA.en.video.backgroundImage}
+            image={DATA.en.video.image}
             button={DATA.en.video.button}
           />
 
-          <LeaderForm
-            formBg={sectionBgAlt}
-            title={DATA.en.form.title()}
-            labels={DATA.en.form.labels}
-            fields={DATA.en.form.fields}
-            messages={DATA.en.form.messages}
-          />
-          
           <Team className="team-section" title={DATA.en.team.title} members={DATA.en.team.members}></Team>
+
+          <Events
+            titleBg={DATA.en.events.titleBg}
+            button={DATA.en.events.button}
+            content={DATA.en.events.items}
+            title={DATA.en.events.title}
+          />
 
           <Ecosystem title={DATA.en.ecosystem.title} description={DATA.en.ecosystem.description()} backgroundImage={mapBgAlt} />
 
@@ -382,9 +373,9 @@ class IndexPage extends React.Component<any, State> {
         <style>
           {
             `body {
-                transition: opacity ease 0.5s;
-                opacity: 1;
-              }`
+              transition: opacity ease 0.5s;
+              opacity: 1;
+            }`
           }
         </style>
       </IndexLayout>
