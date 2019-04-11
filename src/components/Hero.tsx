@@ -37,6 +37,7 @@ const Hero: React.SFC<Props> = ({ title, subtitle, cta, image, backgroundImage }
 
   const ContainerWithBackgroundImage = styled.section`
     background: url(${backgroundImage});
+    bakground-color: #23475C;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
