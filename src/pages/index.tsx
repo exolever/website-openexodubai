@@ -20,7 +20,6 @@ import * as sectionBgAlt from '../img/sub-bg.jpg';
 import * as mapBgAlt from '../img/map-alt.jpg';
 import * as contactBg from '../img/bg-contact.jpg';
 
-
 import * as bg01 from '../img/bg01.jpg';
 import * as bg02 from '../img/bg02.png';
 import * as icon01 from '../img/icon01.png';
@@ -305,7 +304,7 @@ const DATA = {
       ]
     },
     footer: {
-      main: {text: 'OpenExO', url: 'https://www.exolever.com/' },
+      main: {text: 'OpenExO', url: 'https://www.openexo.com/' },
       links: [
         {text: 'Exponential Organizations', url: 'https://www.exponentialorgs.com/' },
         {text: 'Exponential Transformation', url: 'https://www.exponentialtransformationbook.com/' },
