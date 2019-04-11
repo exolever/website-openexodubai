@@ -346,7 +346,7 @@ class IndexPage extends React.Component<any, State> {
           <Team className="team-section" title={DATA.en.team.title} members={DATA.en.team.members}></Team>
           <HighlightSection title={DATA.en.ecosystem.title} backgroundImage={mapBgAlt} className="ecosystem">
             <div className="text-center">
-              {DATA.en.ecosystem.description}
+              {DATA.en.ecosystem.description()}
             </div>
           </HighlightSection>
 
