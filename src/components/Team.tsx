@@ -6,14 +6,16 @@ interface Props {
   members: Array<any>;
 }
 
-function TeamMember(member){
-  return (<div className="col-lg-3 col-md-6">
-  <div className="team-member">
-    <img src={member.image} alt="#"/>
-    <h4>{member.name}</h4>
-    <p>{member.position}</p>
-  </div>
-  </div>)
+function TeamMember({ image, name, position }){
+  return (
+    <div className="col-lg-3 col-md-6">
+      <div className="team-member">
+        <img src={image} alt="#"/>
+        <h4>{name}</h4>
+        <p>{position}</p>
+      </div>
+    </div>
+  );
 }
 
 const Team: React.SFC<Props> = ({ className, title, members }) => {
@@ -26,7 +28,7 @@ const Team: React.SFC<Props> = ({ className, title, members }) => {
 			</div>
       <div className="row">
       {members.map((member) => {
-        return TeamMember(member)
+        return <TeamMember {...member} key={member.name} />;
       })}
       </div>
 				</div>

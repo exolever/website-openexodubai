@@ -137,19 +137,34 @@ const DATA = {
               title: 'Registration and Networking Breakfast',
             },
             {
-              start: '08:00',
-              end: '09:00',
-              title: 'Registration and Networking Breakfast',
+              start: '09:00',
+              end: '10:00',
+              title: 'Opening Remarks & Wakeup Keynote by Salim Ismail',
             },
             {
-              start: '08:00',
-              end: '09:00',
-              title: 'Registration and Networking Breakfast',
+              start: '10:00',
+              end: '12:00',
+              title: 'Session 1: Core Initiatives',
+            },
+            {
+              start: '12:00',
+              end: '14:00',
+              title: 'Session 2: Edge Initiatives',
+            },
+            {
+              start: '15:00',
+              end: '18:00',
+              title: 'Session 3: Disruptive Business Model Development',
+            },
+            {
+              start: '18:00',
+              end: '19:00',
+              title: 'Award Ceremony & Wrap-up by Salim Ismail',
             },
           ]
         },
         {
-          title: () => <>20th April, 2019</>,
+          title: () => <>19th April, 2019</>,
           sessionGroup: [
             {
               title: 'AM - Special 1-2-1 Meeting',
@@ -165,42 +180,31 @@ const DATA = {
               subtitle: 'By Invitation Only',
               sessions: [
                 {
-                  start: '08:00',
-                  end: '09:00',
-                  title: 'Registration and Networking Breakfast',
+                  start: '18:00',
+                  end: '19:00',
+                  title: 'Welcome Drinks & Networking',
                 },
                 {
-                  start: '08:00',
-                  end: '09:00',
-                  title: 'Registration and Networking Breakfast',
+                  start: '19:00',
+                  end: '20:00',
+                  title: 'Keynote by Salim Ismail & UAE Minister & Dignitaries',
                 },
                 {
-                  start: '08:00',
-                  end: '09:00',
-                  title: 'Registration and Networking Breakfast',
+                  start: '20:00',
+                  end: '22:00',
+                  title: 'Networking Dinner',
                 },
               ]
             },
           ]
         },
         {
-          title: () => <>20th April, 2019 <br /> ExO Summit</>,
-          subtitle: 'Led by Salim Ismail',
+          title: () => <>18th April, 2019 <br /> OpenExO Launch</>,
+          subtitle: 'Led by Invitation Only',
           sessions: [
             {
-              start: '08:00',
-              end: '09:00',
-              title: 'Registration and Networking Breakfast',
-            },
-            {
-              start: '08:00',
-              end: '09:00',
-              title: 'Registration and Networking Breakfast',
-            },
-            {
-              start: '08:00',
-              end: '09:00',
-              title: 'Registration and Networking Breakfast',
+              start: '17:00',
+              title: 'Launch of ExO Summitt in the Middle East, Boook-signing and Fireside chat between Futurist Tariq Querishy and Thought Leader Salim Ismail & follwed by Live Debate with Industry Leaders and Global Organisations',
             },
           ]
         },
@@ -378,15 +382,15 @@ class IndexPage extends React.Component<any, State> {
             </div>
             <div className="row text-center">
               <h3 className="col-lg-12">{DATA.en.partners.sections[0].title}</h3>
-              {DATA.en.partners.sections[0].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
+              {DATA.en.partners.sections[0].logos.map(logo => <div key={logo} className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
             </div>
             <div className="row text-center">
               <h3 className="col-lg-12">{DATA.en.partners.sections[1].title}</h3>
-              {DATA.en.partners.sections[1].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
+              {DATA.en.partners.sections[1].logos.map(logo => <div key={logo} className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
             </div>
             <div className="row text-center">
               <h3 className="col-lg-12">{DATA.en.partners.sections[2].title}</h3>
-              {DATA.en.partners.sections[2].logos.map(logo => <div className="col-lg-4 logo-item"><img className="text-center" src={logo} /></div>)}
+              {DATA.en.partners.sections[2].logos.map(logo => <div key={logo} className="col-lg-4 logo-item"><img className="text-center" src={logo} /></div>)}
             </div>
           </Section>
 
@@ -409,8 +413,9 @@ class IndexPage extends React.Component<any, State> {
             </div>
 
             </div>
-            <div class="text-center">
-            <a target="_blank" class="site-btn text-white" href="https://www.openexo.com/transformation-services">Request a service</a></div>
+            <div className="text-center">
+              <a target="_blank" className="site-btn text-white" href="https://www.openexo.com/transformation-services">Request a service</a>
+            </div>
           </Section>
 
           <Footer links={DATA.en.footer.links} copyright={DATA.en.footer.copyright} mainLogo={DATA.en.footer.main} />
