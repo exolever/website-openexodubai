@@ -1930,7 +1930,7 @@ a:hover {
 .pricing-plan .pricing-body {
 	background: #eef6f9;
 	text-align: center;
-	padding: 54px 68px 52px;
+	padding: 54px 25px 25px;
 	border-radius: 14px;
 }
 
@@ -1953,8 +1953,8 @@ a:hover {
 
 .pricing-plan .pricing-body ul li {
 	color: #585858;
-	line-height: 1;
-	margin-bottom: 36px;
+	line-height: 1.5;
+	margin-bottom: 15px;
 	text-align: left;
 }
 

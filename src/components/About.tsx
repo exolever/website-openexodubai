@@ -15,7 +15,7 @@ interface Props {
 }
 
 const Vertical = ({ title, description, image, column }) =>
-  <div className={`col-lg-${column}  text-center`}>
+  <div key={title} className={`col-lg-${column} text-center`}>
     <img src={image} alt={title && title()} width="200" />
     <div className="about-text">
     {title && <h3>{title()}</h3>}
@@ -24,8 +24,8 @@ const Vertical = ({ title, description, image, column }) =>
   </div>;
 
 const Horizontal = ({ title, description, image }) =>
-  <>
-    <div className="col-lg-6  text-center">
+  <div key={title}>
+    <div className="col-lg-6 text-center">
       <img src={image} alt={title && title()} />
     </div>
     {title &&
@@ -33,7 +33,7 @@ const Horizontal = ({ title, description, image }) =>
         <h3>{title()}</h3>
         <p>{description()}</p>
       </div>}
-  </>;
+  </div>;
 
 const About: React.SFC<Props> = ({ title, description, content = [] }) => {
   const column = Math.floor(12 / content.length);
@@ -49,10 +49,10 @@ const About: React.SFC<Props> = ({ title, description, content = [] }) => {
         </div>}
       {content.length > 0 &&
         <div className="row spad">
-          {content.map(({ title, description, horizontal, image }) => {
+          {content.map(({ title, description, horizontal, image }, index) => {
             const props = { title, description, image, column };
             return horizontal ?
-              <Horizontal {...props} key={title} /> : <Vertical {...props} key={title} />
+              <Horizontal {...props} key={index} /> : <Vertical {...props} key={index} />
           })}
         </div>}
     </Section>

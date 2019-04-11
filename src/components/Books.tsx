@@ -18,7 +18,7 @@ interface Props {
   button: Button;
 }
 
-const About: React.SFC<Props> = ({ title, titleBg, content, button }) => {
+const Books: React.SFC<Props> = ({ title, titleBg, content, button }) => {
   const column = Math.floor(12 / content.length);
   return (
     <>
@@ -46,4 +46,4 @@ const About: React.SFC<Props> = ({ title, titleBg, content, button }) => {
   );
 };
 
-export default About;
+export default Books;

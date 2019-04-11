@@ -38,12 +38,12 @@ const Sessions = ({ sessions }) => {
   return (
     <ul className="text-left">
       {sessions.map((content) =>
-        <li key={content.title}>
+        <li key={typeof content === 'string' ? content : content.title}>
           {typeof content === 'string'
             ? <span>{content}</span>
             : 
               <>
-                <span>{content.start} - {content.end}</span><br/>
+                <span>{content.start}{content.end && (' - '+ content.end)}</span><br/>
                 <strong>{content.title}</strong>
               </>
           }
@@ -64,7 +64,7 @@ const Events: React.SFC<Props> = ({ title, titleBg, content, button }) => {
       <Section className="about-section">
         <div className="row spad">
           {content.map(({ title, subtitle, sessionGroup, sessions,  notes }) =>
-            <div className={`col-lg-${column}`}>
+            <div key={title} className={`col-lg-${column}`}>
               <div className="pricing-plan">
                 <div className="pricing-body">
                   <h2>
@@ -73,16 +73,16 @@ const Events: React.SFC<Props> = ({ title, titleBg, content, button }) => {
                   </h2>
                   {sessionGroup
                     ? sessionGroup.map(({ title, subtitle, sessions: ses }) =>
-                      <>
+                      <div key={title}>
                         <h3>
                           {title}<br />
                           {subtitle && <small>{subtitle}</small>}
                         </h3>
                         <Sessions sessions={ses} />
-                      </>)
+                      </div>)
                     : <Sessions sessions={sessions} />
                   }
-                  { notes && <p>{notes}</p>}
+                  { notes && <p className="text-left">{notes}</p>}
                 </div>
               </div>
             </div>

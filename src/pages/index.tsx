@@ -10,6 +10,9 @@ import About from '../components/About';
 import Books from '../components/Books';
 import Events from '../components/Events';
 import Team from '../components/Team';
+import Video from '../components/Video';
+import Section from '../components/Section';
+import HighlightSection from '../components/HighlightSection';
 
 import * as sectionBg from '../img/main-bg.jpg';
 import * as sectionBgAlt from '../img/sub-bg.jpg';
@@ -17,22 +20,21 @@ import * as mapBgAlt from '../img/map-alt.jpg';
 import * as contactBg from '../img/bg-contact.jpg';
 
 
+import * as bg01 from '../img/bg01.jpg';
+import * as bg02 from '../img/bg02.png';
 import * as icon01 from '../img/icon01.png';
 import * as icon02 from '../img/icon02.png';
 import * as icon03 from '../img/icon03.png';
-import * as icon04 from '../img/icon04.png';
+// import * as icon04 from '../img/icon04.png';
 import * as book01 from '../img/book01.png';
 import * as book02 from '../img/book02.png';
-
 import * as emilie from '../img/coaches/emilie.png';
 import * as evonne from '../img/coaches/evonne.png';
 import * as francisco from '../img/coaches/francisco.png';
 import * as luciana from '../img/coaches/luciana-pic.jpg';
 import * as paul from '../img/coaches/paul.png';
 import * as jaroslav from '../img/coaches/jaroslav.png';
-import Section from '../components/Section';
-import HighlightSection from '../components/HighlightSection';
-
+import * as Salimi from '../img/Salimi.png';
 import * as logo0 from '../img/logo/0.jpg';
 import * as logo1 from '../img/logo/1.jpg';
 import * as logo2 from '../img/logo/2.jpg';
@@ -87,7 +89,7 @@ const DATA = {
     },
     books: {
       title: 'TRANSFORMATION AS A SERVICE',
-      titleBg: '/imgs/bg02.png',
+      titleBg: bg02,
       features: [
         {
           title: 'WHY do I need to transform?',
@@ -103,27 +105,26 @@ const DATA = {
         url: 'mailto:marketing@madtalks.com'
       }
     },
-    // about2: {
-    //   features: [
-    //     {
-    //       description: () =>
-    //         <>
-    //           ExO Summits inspires, educates and supports; leaders, intrapreneurs and entrepreneurs worldwide to get started with transformation journeys.<br />
-    //           Transform from a traditional to an exponential operating model by moving away from a scarcity mindset towards one based on abundance. <br />
-    //           By understanding and applying the ExO framework to your organization you'll tap into growth by a factor of 10x.<br />
-    //           Be the first to learn about upcoming summits or organize a summit yourself
-    //         </>,
-    //       image: icon04
-    //     },
-    //   ],
-    //   button: {
-    //     label: 'LEARN MORE',
-    //     url: 'https://storage.googleapis.com/wzukusers/user-34745225/documents/5c987a606437dxmlkMHz/OpenExO%20Final.pdf'
-    //   }
-    // },
+    about2: {
+      features: [
+        {
+          description: () =>
+            <>
+              ExO Summits inspires, educates and supports; leaders, intrapreneurs and entrepreneurs worldwide to get started with transformation journeys.<br />
+              Transform from a traditional to an exponential operating model by moving away from a scarcity mindset towards one based on abundance. <br />
+              By understanding and applying the ExO framework to your organization you'll tap into growth by a factor of 10x.<br />
+              Be the first to learn about upcoming summits or organize a summit yourself
+            </>,
+        },
+      ],
+      button: {
+        label: 'LEARN MORE',
+        url: 'https://storage.googleapis.com/wzukusers/user-34745225/documents/5c987a606437dxmlkMHz/OpenExO%20Final.pdf'
+      }
+    },
     events: {
       title: 'OpenExO Programme',
-      titleBg: '/imgs/bg01.jpg',
+      titleBg: bg01,
       image: icon01,
       items: [
         {
@@ -137,19 +138,34 @@ const DATA = {
               title: 'Registration and Networking Breakfast',
             },
             {
-              start: '08:00',
-              end: '09:00',
-              title: 'Registration and Networking Breakfast',
+              start: '09:00',
+              end: '10:00',
+              title: 'Opening Remarks & Wakeup Keynote by Salim Ismail',
             },
             {
-              start: '08:00',
-              end: '09:00',
-              title: 'Registration and Networking Breakfast',
+              start: '10:00',
+              end: '12:00',
+              title: 'Session 1: Core Initiatives',
+            },
+            {
+              start: '12:00',
+              end: '14:00',
+              title: 'Session 2: Edge Initiatives',
+            },
+            {
+              start: '15:00',
+              end: '18:00',
+              title: 'Session 3: Disruptive Business Model Development',
+            },
+            {
+              start: '18:00',
+              end: '19:00',
+              title: 'Award Ceremony & Wrap-up by Salim Ismail',
             },
           ]
         },
         {
-          title: () => <>20th April, 2019</>,
+          title: () => <>19th April, 2019</>,
           sessionGroup: [
             {
               title: 'AM - Special 1-2-1 Meeting',
@@ -165,42 +181,31 @@ const DATA = {
               subtitle: 'By Invitation Only',
               sessions: [
                 {
-                  start: '08:00',
-                  end: '09:00',
-                  title: 'Registration and Networking Breakfast',
+                  start: '18:00',
+                  end: '19:00',
+                  title: 'Welcome Drinks & Networking',
                 },
                 {
-                  start: '08:00',
-                  end: '09:00',
-                  title: 'Registration and Networking Breakfast',
+                  start: '19:00',
+                  end: '20:00',
+                  title: 'Keynote by Salim Ismail & UAE Minister & Dignitaries',
                 },
                 {
-                  start: '08:00',
-                  end: '09:00',
-                  title: 'Registration and Networking Breakfast',
+                  start: '20:00',
+                  end: '22:00',
+                  title: 'Networking Dinner',
                 },
               ]
             },
           ]
         },
         {
-          title: () => <>20th April, 2019 <br /> ExO Summit</>,
-          subtitle: 'Led by Salim Ismail',
+          title: () => <>18th April, 2019 <br /> OpenExO Launch</>,
+          subtitle: 'Led by Invitation Only',
           sessions: [
             {
-              start: '08:00',
-              end: '09:00',
-              title: 'Registration and Networking Breakfast',
-            },
-            {
-              start: '08:00',
-              end: '09:00',
-              title: 'Registration and Networking Breakfast',
-            },
-            {
-              start: '08:00',
-              end: '09:00',
-              title: 'Registration and Networking Breakfast',
+              start: '17:00',
+              title: 'Launch of ExO Summitt in the Middle East, Boook-signing and Fireside chat between Futurist Tariq Querishy and Thought Leader Salim Ismail & follwed by Live Debate with Industry Leaders and Global Organisations',
             },
           ]
         },
@@ -208,6 +213,15 @@ const DATA = {
       button: {
         label: 'CONTACT US TO BE A PART OF ExO Summit',
         url: 'mailto:marketing@madtalks.com'
+      }
+    },
+    video: {
+      title: 'Salim\'s message is that "If you\'re not disrupting your own business or industry, then someone else already is."',
+      image: Salimi,
+      backgroundImage: bg02,
+      button: {
+        label: 'VIDEO: SALIM ISMAIL - TEDx',
+        url: 'https://www.youtube.com/watch?v=mV0oKVOIGG4'
       }
     },
     form: {
@@ -329,48 +343,59 @@ class IndexPage extends React.Component<any, State> {
               button={DATA.en.books.button}
             />
 
+          <About
+            content={DATA.en.about2.features}
+          />
 
-            <Events
-              title={DATA.en.events.title}
-              titleBg={DATA.en.events.titleBg}
-              content={DATA.en.events.items}
-              button={DATA.en.events.button}
-            />
+          <Video
+            title={DATA.en.video.title}
+            backgroundImage={DATA.en.video.backgroundImage}
+            image={DATA.en.video.image}
+            button={DATA.en.video.button}
+          />
+          <Events
+            titleBg={DATA.en.events.titleBg}
+            button={DATA.en.events.button}
+            content={DATA.en.events.items}
+            title={DATA.en.events.title}
+          />
 
-            <Team className="team-section" title={DATA.en.team.title} members={DATA.en.team.members}></Team>
-            <HighlightSection title={DATA.en.ecosystem.title} backgroundImage={mapBgAlt} className="ecosystem">
-              <div className="text-center">
-                {DATA.en.ecosystem.description()}
-              </div>
-            </HighlightSection>
+          <Team className="team-section" title={DATA.en.team.title} members={DATA.en.team.members}></Team>
+          <HighlightSection title={DATA.en.ecosystem.title} backgroundImage={mapBgAlt} className="ecosystem">
+            <div className="text-center">
+              {DATA.en.ecosystem.description()}
+            </div>
+          </HighlightSection>
 
-            <Section>
-              <div className="row spad text-center">
-                <h2 className="col-lg-12">{DATA.en.partners.title}</h2>
-              </div>
-              <div className="row text-center">
-                <h3 className="col-lg-12">{DATA.en.partners.sections[0].title}</h3>
-                {DATA.en.partners.sections[0].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
-              </div>
-              <div className="row text-center">
-                <h3 className="col-lg-12">{DATA.en.partners.sections[1].title}</h3>
-                {DATA.en.partners.sections[1].logos.map(logo => <div className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
-              </div>
-              <div className="row text-center">
-                <h3 className="col-lg-12">{DATA.en.partners.sections[2].title}</h3>
-                {DATA.en.partners.sections[2].logos.map(logo => <div className="col-lg-4 logo-item"><img className="text-center" src={logo} /></div>)}
-              </div>
-            </Section>
-            <HighlightSection
+          <Section>
+            <div className="row spad text-center">
+              <h2 className="col-lg-12">{DATA.en.partners.title}</h2>
+            </div>
+            <div className="row text-center">
+              <h3 className="col-lg-12">{DATA.en.partners.sections[0].title}</h3>
+              {DATA.en.partners.sections[0].logos.map(logo => <div key={logo} className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
+            </div>
+            <div className="row text-center">
+              <h3 className="col-lg-12">{DATA.en.partners.sections[1].title}</h3>
+              {DATA.en.partners.sections[1].logos.map(logo => <div key={logo} className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
+            </div>
+            <div className="row text-center">
+              <h3 className="col-lg-12">{DATA.en.partners.sections[2].title}</h3>
+              {DATA.en.partners.sections[2].logos.map(logo => <div key={logo} className="col-lg-4 logo-item"><img className="text-center" src={logo} /></div>)}
+            </div>
+          </Section>
+
+          <HighlightSection
               title={`Transformation as a service`}
               backgroundImage={sectionBgAlt}
             />
-            <Section>
-              <div className="row">
-                <div className="col-lg-6 text-center">
-                  <h3>ExO Sprint</h3>
-                  <p>
-                    An ExO Sprint is a 10-week process based on the book <a href="https://www.exponentialtransformationbook.com/" target="_blank"><strong><em>Exponential Transformation</em></strong></a> that helps organizations to evolve their business models from scarcity to abundance while dealing with the immune system. The ExO Sprint has been successfully run in large, medium and small organizations around the world. It is designed to rapidly move your organization’s leadership culture and management thinking forward.
+
+          <Section>
+            <div className="row">
+            <div className="col-lg-6 text-center">
+            <h3>ExO Sprint</h3>
+            <p>
+            An ExO Sprint is a 10-week process based on the book <a href="https://www.exponentialtransformationbook.com/" target="_blank"><strong><em>Exponential Transformation</em></strong></a> that helps organizations to evolve their business models from scarcity to abundance while dealing with the immune system. The ExO Sprint has been successfully run in large, medium and small organizations around the world. It is designed to rapidly move your organization’s leadership culture and management thinking forward.
             </p>
                 </div>
                 <div className="col-lg-6 text-center">
