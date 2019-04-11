@@ -1899,14 +1899,10 @@ a:hover {
 }
 
 .logo-center {
-	margin:0 auto;
+	margin: 0 auto;
 	flex: 0 0 50%;
   max-width: 50%;
 }
-
-
-
-
 
 .pricing-plan {
 	margin-bottom: 40px;

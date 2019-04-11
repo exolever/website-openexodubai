@@ -23,10 +23,10 @@ const LogoImg = styled.img`
 const LogoLink = styled.a`
   display: block;
   position: absolute;
-  right: 160px;
-  bottom: 17px;
-  width: 134px;
-  height: 40px;
+  right: 18%;
+  top: 80%;
+  width: 65%;
+  height: 17%;
   overflow: hidden;
   text-indent: 200%;
   white-space: nowrap;
@@ -37,7 +37,7 @@ const Hero: React.SFC<Props> = ({ title, subtitle, cta, image, backgroundImage }
 
   const ContainerWithBackgroundImage = styled.section`
     background: url(${backgroundImage});
-    bakground-color: #23475C;
+    background-color: #23475C;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;

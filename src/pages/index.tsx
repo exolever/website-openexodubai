@@ -308,17 +308,22 @@ const DATA = {
     },
     partners: {
       title: `Dubai ExO Summit Partners & Sponsors`,
-      sections: [{
-        title: `Platinum Sponsor`,
-        logos: [logo5]
+      sections: [
+        {
+          title: `Platinum Sponsor`,
+          logos: [logo5]
         },
         {
           title: `Gold Sponsor`,
           logos: [logo8]
         },
         {
+          title: `Silver Sponsor`,
+          logos: [logo9]
+        },
+        {
           title: `Strategic Partners`,
-          logos: [logo1, logo2, logo3, logo4, logo6, logo7, logo9, logo10]
+          logos: [logo1, logo2, logo3, logo4, logo6, logo7, logo10]
         }
       ]
     },
