@@ -14,11 +14,12 @@ import Video from '../components/Video';
 import Section from '../components/Section';
 import HighlightSection from '../components/HighlightSection';
 
-// import * as sectionBg from '../img/bg-61-img.jpg';
 import * as sectionBg from '../img/main-bg.jpg';
 import * as sectionBgAlt from '../img/sub-bg.jpg';
-// import * as mapBg from '../img/map.jpg';
 import * as mapBgAlt from '../img/map-alt.jpg';
+import * as contactBg from '../img/bg-contact.jpg';
+
+
 import * as bg01 from '../img/bg01.jpg';
 import * as bg02 from '../img/bg02.png';
 import * as icon01 from '../img/icon01.png';
@@ -224,152 +225,142 @@ const DATA = {
       }
     },
     form: {
-      title: () => <>Organize a summit in your country</>,
+      title: () => <>CONTACT</>,
+      description: () => (<div className="rich-text-content common-rich-content-style has-content"><div><strong>G-02, DMC Building 5, Dubai Media City, P.O.Box # 502126, Dubai, UAE</strong></div><div><br/></div><div><strong>Phone: </strong>+971 55 229 7000</div><div><br/></div><div>If you have&nbsp;any questions, please do not hesitate to send us a message. We will&nbsp;reply within 24 hours.<br/></div><div><br/></div><div><br/></div></div>),
       labels: {
-        required: 'indicates required',
+          required: 'indicates required',
         email: 'Email Address',
         name: 'Name',
-        location: 'Preferred Location of Summit',
-        dates: 'Dates of the summit',
-        description: 'Why would you like to host this summit?',
-        linkedIn: 'LinkedIn URL',
-        button: 'Create summit'
+        subject: `Subject`,
+        phone: `Phone`,
+        description: 'Would you like to be a part of OpenExO?',
+        button: 'Submit'
       },
       fields: {
-        groups: [
-          { id: 8192, hidden: true },
-        ],
-        groupTitle: 'I want to know about:',
-      },
+          groups: [
+          {id: 8192, hidden: true },
+      ],
+      groupTitle: 'I want to know about:',
+    },
       messages: {
-        success: 'Thanks for sending your summit info!',
+          success: 'Thanks for sending your summit info!',
         error: 'Please try it later, again.'
       }
     },
     team: {
-      title: 'The OpenExO Coaches',
-      members: [
+          title: 'The OpenExO Coaches',
+        members: [
         {
           image: francisco,
-          name: 'Francisco Palao',
-          position: 'Co-Founder - OpenExO'
-        },
+        name: 'Francisco Palao',
+        position: 'Co-Founder - OpenExO'
+      },
         {
           image: jaroslav,
-          name: 'Jaroslav Dokupil',
-          position: 'CEO - OpenExO'
-        },
+        name: 'Jaroslav Dokupil',
+        position: 'CEO - OpenExO'
+      },
         {
           image: emilie,
-          name: 'Emilie Syndney-Smith',
-          position: 'CEO - ExO Works'
-        },
+        name: 'Emilie Syndney-Smith',
+        position: 'CEO - ExO Works'
+      },
         {
           image: paul,
-          name: 'Paul Epping',
-          position: 'Master Disruptor - OpenExO'
-        },
+        name: 'Paul Epping',
+        position: 'Master Disruptor - OpenExO'
+      },
         {
           image: luciana,
-          name: 'Luciana Ledesma',
-          position: 'Head ExO Coach'
-        },
+        name: 'Luciana Ledesma',
+        position: 'Head ExO Coach'
+      },
         {
           image: evonne,
-          name: 'Evonne Heyning',
-          position: 'Director of Corporate Growth - OpenExO'
-        },
-      ]
-    },
+        name: 'Evonne Heyning',
+        position: 'Director of Corporate Growth - OpenExO'
+      },
+    ]
+  },
     ecosystem: {
-      title: 'The OpenExO Ecosystem',
+          title: 'The OpenExO Ecosystem',
       description: () => <p className="text-white">The OpenExO Ecosystem is a global transformation playground where 400+ exponential thought leaders, innovation coaches, disruption specialists, startup founders and tech industry gurus gather to solve strategic transformation challenges. We partner with ExO entities, accelerators, incubators, tech companies and technology specialists (artificial intelligence, blockchain, augmented & virtual reality, 3D printing, biotechnology, robotics, drones and more).</p>
-    },
+        },
     partners: {
-      title: `OpenExO Summit Partners & Sponsors`,
+          title: `OpenExO Summit Partners & Sponsors`,
       sections: [{
-        title: `Platinum Sponsor`,
+          title: `Platinum Sponsor`,
         logos: [logo5]
       },
       {
-        title: `Gold Sponsor`,
+          title: `Gold Sponsor`,
         logos: [logo8]
       },
       {
-        title: `Strategic Partners`,
+          title: `Strategic Partners`,
         logos: [logo1, logo2, logo3, logo4, logo6, logo7]
       }
 
       ]
     },
     footer: {
-      main: { text: 'OpenExO', url: 'https://www.exolever.com/' },
-      links: [
-        { text: 'Exponential Organizations', url: 'https://www.exponentialorgs.com/' },
-        { text: 'Exponential Transformation', url: 'https://www.exponentialtransformationbook.com/' },
-        { text: 'ExO Canvas', url: 'https://www.exocanvas.com/' },
+          main: {text: 'OpenExO', url: 'https://www.exolever.com/' },
+        links: [
+        {text: 'Exponential Organizations', url: 'https://www.exponentialorgs.com/' },
+        {text: 'Exponential Transformation', url: 'https://www.exponentialtransformationbook.com/' },
+        {text: 'ExO Canvas', url: 'https://www.exocanvas.com/' },
       ],
       copyright: (year = new Date().getFullYear()) =>
         <>
           Building Exponential Organizations - OpenExO<sup>®</sup> {year} <br /> <small>Copyright &copy; {year} All rights reserved</small>
         </>
-    }
-  }
-};
+        }
+      }
+    };
 class IndexPage extends React.Component<any, State> {
-  render() {
-    return (
+          render() {
+        return (
 
       <IndexLayout>
-        <Page>
-          <Hero
-            title="ExO Summit"
-            subtitle={DATA.en.hero.description()}
-            backgroundImage={sectionBg}
-            cta={{ text: DATA.en.hero.btnLabel, target: '#community' }}
-          />
+          <Page>
+            <Hero
+              title="ExO Summit"
+              subtitle={DATA.en.hero.description()}
+              backgroundImage={sectionBg}
+              cta={{ text: DATA.en.hero.btnLabel, target: '#submit' }}
+            />
 
-          <About
-            title={DATA.en.about.title}
-            description={DATA.en.about.description}
-            content={DATA.en.about.features}
-          />
+            <About
+              title={DATA.en.about.title}
+              description={DATA.en.about.description}
+              content={DATA.en.about.features}
+            />
 
-          <Books
-            title={DATA.en.books.title}
-            titleBg={DATA.en.books.titleBg}
-            content={DATA.en.books.features}
-            button={DATA.en.books.button}
-          />
+            <Books
+              title={DATA.en.books.title}
+              titleBg={DATA.en.books.titleBg}
+              content={DATA.en.books.features}
+              button={DATA.en.books.button}
+            />
 
           <About
             content={DATA.en.about2.features}
           />
 
-          <Events
-            title={DATA.en.events.title}
-            titleBg={DATA.en.events.titleBg}
-            content={DATA.en.events.items}
-            button={DATA.en.events.button}
-          />
-
           <Video
             title={DATA.en.video.title}
-            image={DATA.en.video.image}
             backgroundImage={DATA.en.video.backgroundImage}
+            image={DATA.en.video.image}
             button={DATA.en.video.button}
           />
-
-          <LeaderForm
-            formBg={sectionBgAlt}
-            title={DATA.en.form.title()}
-            labels={DATA.en.form.labels}
-            fields={DATA.en.form.fields}
-            messages={DATA.en.form.messages}
+          <Events
+            titleBg={DATA.en.events.titleBg}
+            button={DATA.en.events.button}
+            content={DATA.en.events.items}
+            title={DATA.en.events.title}
           />
-          
-          <Team className="team-section" title={DATA.en.team.title} members={DATA.en.team.members}></Team>
 
+          <Team className="team-section" title={DATA.en.team.title} members={DATA.en.team.members}></Team>
           <HighlightSection title={DATA.en.ecosystem.title} backgroundImage={mapBgAlt} className="ecosystem">
             <div className="text-center">
               {DATA.en.ecosystem.description()}
@@ -406,31 +397,37 @@ class IndexPage extends React.Component<any, State> {
             <p>
             An ExO Sprint is a 10-week process based on the book <a href="https://www.exponentialtransformationbook.com/" target="_blank"><strong><em>Exponential Transformation</em></strong></a> that helps organizations to evolve their business models from scarcity to abundance while dealing with the immune system. The ExO Sprint has been successfully run in large, medium and small organizations around the world. It is designed to rapidly move your organization’s leadership culture and management thinking forward.
             </p>
-            </div>
-            <div className="col-lg-6 text-center">
-            <h3 >ExO Sprint</h3>
-            <p>ExO On-Demand is a customized product built around flexible access to our ExO Ecosystem members. Consult technology and industry specialists, enhance your strategic offsite with virtual advisors, incubate your disruptive initiatives with exponentially minded people... these are just a few of the ways we can help you if your organization wants to start or has already started a transformation process. </p>
-            </div>
+                </div>
+                <div className="col-lg-6 text-center">
+                  <h3 >ExO Sprint</h3>
+                  <p>ExO On-Demand is a customized product built around flexible access to our ExO Ecosystem members. Consult technology and industry specialists, enhance your strategic offsite with virtual advisors, incubate your disruptive initiatives with exponentially minded people... these are just a few of the ways we can help you if your organization wants to start or has already started a transformation process. </p>
+                </div>
 
-            </div>
-            <div className="text-center">
-              <a target="_blank" className="site-btn text-white" href="https://www.openexo.com/transformation-services">Request a service</a>
-            </div>
-          </Section>
-
-          <Footer links={DATA.en.footer.links} copyright={DATA.en.footer.copyright} mainLogo={DATA.en.footer.main} />
-        </Page>
-        <style>
-          {
-            `body {
+              </div>
+              <div className="text-center">
+                <a target="_blank" className="site-btn text-white" href="https://www.openexo.com/transformation-services">Request a service</a></div>
+            </Section>
+            <LeaderForm
+              formBg={contactBg}
+              title={DATA.en.form.title()}
+              description={DATA.en.form.description()}
+              labels={DATA.en.form.labels}
+              fields={DATA.en.form.fields}
+              messages={DATA.en.form.messages}
+            />
+            <Footer links={DATA.en.footer.links} copyright={DATA.en.footer.copyright} mainLogo={DATA.en.footer.main} />
+          </Page>
+          <style>
+            {
+              `body {
                 transition: opacity ease 0.5s;
                 opacity: 1;
               }`
-          }
-        </style>
-      </IndexLayout>
-    )
-  }
-}
+            }
+          </style>
+        </IndexLayout>
+        )
+      }
+    }
 
-export default IndexPage;
+    export default IndexPage;

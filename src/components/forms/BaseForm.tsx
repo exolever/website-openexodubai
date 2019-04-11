@@ -4,10 +4,8 @@ import jsonp from 'jsonp';
 import styled from '@emotion/styled';
 import Checkbox from './Checkbox';
 
-const MC = {
-  endpoint: 'https://exodevhub.us20.list-manage.com/subscribe/post-json',
-  user: 'ccfff1ccf7951d4ec0af22cac',
-  id: '8ca8438865'
+const Form = {
+  endpoint: 'https://usebasin.com/f/c89a00f6e333'
 };
 
 interface Labels {
@@ -20,6 +18,8 @@ interface Labels {
   dates: string;
   button: string;
   description:string;
+  phone: string;
+  subject: string;
 }
 
 interface Messages {
@@ -43,6 +43,8 @@ interface Props {
   enableDescription?: boolean;
   enableGroups?: Group[];
   groupTitle?: any;
+  enablePhone?: boolean;
+  enableSubject?: boolean;
 }
 
 interface State {
@@ -50,7 +52,7 @@ interface State {
   message: string;
 }
 
-const getUrl = (params: string) => `${MC.endpoint}?${params}`;
+const getUrl = (params: string) => `https://usebasin.com/f/02412db358de`;
 
 const getId = (() => {
   let id = 0;
@@ -59,6 +61,16 @@ const getId = (() => {
     return id;
   };
 })();
+
+const getWindowSearch = () => {
+ return typeof window !== 'undefined' ? window.location.search : '';
+}
+
+const thankYou = () => {
+  if(getWindowSearch().indexOf('?thankyou') > -1) {
+    return 'show-thank-you'
+  }
+}
 
 const getMsg = (msg: string) => /^\d \-/.test(msg) ? msg.split('-')[1] : msg;
 
@@ -90,9 +102,7 @@ class BaseForm extends React.Component<Props, State> {
   }
 
   render() {
-    const { labels, enableName, enableLocation, enableLinkedIn, enableDates, enableDescription, enableGroups, groupTitle } = this.props;
-    const visibleGroups = enableGroups ? enableGroups.filter(group => !group.hidden): [];
-    const hiddenGroups = enableGroups ? enableGroups.filter(group => group.hidden): [];
+    const { labels, enableName, enableLocation, enableLinkedIn, enableDates, enableDescription, enableSubject, enablePhone } = this.props;
 
     if (this.state.complete) {
       return (
@@ -104,14 +114,17 @@ class BaseForm extends React.Component<Props, State> {
       )
     }
     return (
-      <div className="domain-form-warp">
+      <div id="basin-form" className={`domain-form-warp ${thankYou()}`}>
+        <div className="thank-you-message">
+          <div>Thanks for contacting us!</div>
+        </div>
         <div className="mc_embed_signup">
           <form
             className="mc-embedded-subscribe-form domain-search-form validate"
             method="post"
             name="mc-embedded-subscribe-form"
             target="_blank"
-            onSubmit={this.onSubmit}
+            action={`${Form.endpoint}`}
           >
             <div className="mc_embed_signup_scroll">
             <div className="indicates-required"><span className="asterisk">*</span>&nbsp;{labels.required}</div>
@@ -121,10 +134,16 @@ class BaseForm extends React.Component<Props, State> {
                   <label htmlFor={`mce-NAME-${this.id}`}>{labels.name}&nbsp;<span className="asterisk">*</span></label>
                   <input type="text" defaultValue="" name="NAME" id={`mce-NAME-${this.id}`} />
                 </div>}
-              <div className="mc-field-group">
+                <div className="mc-field-group">
                 <label htmlFor={`mce-EMAIL-${this.id}`}>{labels.email}&nbsp;<span className="asterisk">*</span></label>
                 <input type="email" defaultValue="" name="EMAIL" id={`mce-EMAIL-${this.id}`} required />
               </div>
+            {enablePhone &&
+                <div className="mc-field-group">
+                  <label htmlFor={`mce-PHONE-${this.id}`}>{labels.phone}&nbsp;<span className="asterisk">*</span></label>
+                  <input type="text" defaultValue="" name="PHONE" id={`mce-PHONE-${this.id}`} />
+                </div>}
+
 
               {enableDates &&
                 <div className="mc-field-group">
@@ -136,6 +155,11 @@ class BaseForm extends React.Component<Props, State> {
                   <label htmlFor={`mce-LOCATION-${this.id}`}>{labels.location}&nbsp;<span className="asterisk">*</span></label>
                   <input type="text" defaultValue="" name="LOCATION" id={`mce-LOCATION-${this.id}`} />
                 </div>}
+            {enableSubject &&
+              <div className="mc-field-group">
+                <label htmlFor={`mce-SUBJECT-${this.id}`}>{labels.subject}&nbsp;<span className="asterisk">*</span></label>
+                <input type="text" defaultValue="" name="SUBJECT" id={`mce-SUBJECT-${this.id}`} />
+              </div>}
               {enableDescription &&
                 <div className="mc-field-group">
                   <label htmlFor={`mce-MESSAGE-${this.id}`}>{labels.description}&nbsp;<span className="asterisk">*</span></label>
@@ -147,15 +171,8 @@ class BaseForm extends React.Component<Props, State> {
                   <input type="text" defaultValue="" name="LINKEDIN" id={`mce-LINKEDIN-${this.id}`} />
                 </div>}
 
-              {this.state.message &&
-                <div className="mce-responses clear" dangerouslySetInnerHTML={{ __html: this.state.message }} />}
-              <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
-                {hiddenGroups.map(group =>
-                  <input key={group.id} type="hidden" value={group.id} name={`group[189][${group.id}]`} readOnly />)}
-                <input type="text" name={`b_${MC.user}_${MC.id}`} value="" readOnly />
-                <input type="hidden" name="u" value={MC.user} readOnly />
-                <input type="hidden" name="id" value={MC.id} readOnly />
-              </div>
+              {this.state.message && <div className="mce-responses clear" dangerouslySetInnerHTML={{ __html: this.state.message }} />}
+
               <div className="clear">
                 <button type="submit" name="subscribe" className="mc-embedded-subscribe site-btn sb-line">{labels.button}</button>
               </div>
