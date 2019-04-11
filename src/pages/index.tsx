@@ -16,6 +16,7 @@ import * as sectionBgAlt from '../img/bg-mountain.jpg';
 import * as icon01 from '../img/icon01.png';
 import * as icon02 from '../img/icon02.png';
 import * as icon03 from '../img/icon03.png';
+import * as icon04 from '../img/icon04.png';
 import * as book01 from '../img/book01.png';
 import * as book02 from '../img/book02.png';
 
@@ -41,8 +42,8 @@ const DATA = {
       title: 'TRANSFORM FOR THE FUTURE',
       description: () => 
         <>
-          <p>OpenExO is a Global Transformation Ecosystem helping organizations, institutions and people to transform and unlock abundance</p>
-          <p>Have access to disruptive thinking, exponential technology insights and industry leaders</p>
+          OpenExO is a Global Transformation Ecosystem helping organizations, institutions and people to transform and unlock abundance<br />
+          Have access to disruptive thinking, exponential technology insights and industry leaders
         </>,
       features: [
         {
@@ -64,6 +65,7 @@ const DATA = {
     },
     books: {
       title: 'TRANSFORMATION AS A SERVICE',
+      titleBg: '/imgs/bg01.jpg',
       features: [
         {
           title: 'WHY do I need to transform?',
@@ -84,14 +86,18 @@ const DATA = {
         {
           description: () =>
             <>
-              <p>ExO Summits inspires, educates and supports; leaders, intrapreneurs and entrepreneurs worldwide to get started with transformation journeys.</p>
-              <p>Transform from a traditional to an exponential operating model by moving away from a scarcity mindset towards one based on abundance. </p>
-              <p>By understanding and applying the ExO framework to your organization you'll tap into growth by a factor of 10x.</p>
-              <p>Be the first to learn about upcoming summits or organize a summit yourself</p>
+              ExO Summits inspires, educates and supports; leaders, intrapreneurs and entrepreneurs worldwide to get started with transformation journeys.<br />
+              Transform from a traditional to an exponential operating model by moving away from a scarcity mindset towards one based on abundance. <br />
+              By understanding and applying the ExO framework to your organization you'll tap into growth by a factor of 10x.<br />
+              Be the first to learn about upcoming summits or organize a summit yourself
             </>,
-          image: icon01
+          image: icon04
         },
-      ]
+      ],
+      button: {
+        label: 'LEARN MORE',
+        url: 'https://storage.googleapis.com/wzukusers/user-34745225/documents/5c987a606437dxmlkMHz/OpenExO%20Final.pdf'
+      }
     },
     form: {
       title: () => <>Organize a summit in your country</>,
@@ -147,17 +153,18 @@ class IndexPage extends React.Component<any, State> {
             title={DATA.en.about.title}
             description={DATA.en.about.description}
             content={DATA.en.about.features}
-          />
+            />
 
           <Books
             title={DATA.en.books.title}
+            titleBg={DATA.en.books.titleBg}
             content={DATA.en.books.features}
             button={DATA.en.books.button}
           />
 
-          {/* <About
+          <About
             content={DATA.en.about2.features}
-          /> */}
+          />
 
           <LeaderForm
             formBg={sectionBgAlt}

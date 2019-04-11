@@ -16,7 +16,7 @@ const HighlightSection: React.SFC<Props> = ({ title, tagline, icon, backgroundIm
   `;
 
   return (
-    <BackgroundImage  id="community" className="domain-search-section set-bg sc-about-page">
+  <BackgroundImage className="domain-search-section set-bg sc-about-page">
       <div className="container">
         <div className="section-title">
           <h2 className="text-white">{title}</h2>
