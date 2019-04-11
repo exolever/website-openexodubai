@@ -2,7 +2,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'ExO Summits | Inspire, educate and support leaders for a the world for a better future.',
+    title: 'ExO Summits Dubai  | Inspire, educate and support leaders for a the world for a better future.',
     siteUrl: 'http://openexodubai.com',
     description: '',
     author: {
