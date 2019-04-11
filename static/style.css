@@ -1768,6 +1768,9 @@ ol {
 	.input-group {
 		display: block;
 	}
+	.site-btn.ghost {
+		min-width: 0;
+	}
 }
 
 /* Small Mobile :320px. */
@@ -1806,6 +1809,9 @@ ol {
 	}
 	.input-group {
 		display: block;
+	}
+	.site-btn.ghost {
+		min-width: 0;
 	}
 }
 
@@ -1971,4 +1977,24 @@ a:hover {
 .ecosystem {
 	height: 70vh;
 	background-position: bottom;
+}
+
+iframe {
+	border:0;
+	border-radius: 30px;
+	overflow: hidden;
+}
+
+.thank-you-message {
+	display:none;
+}
+.domain-form-warp.show-thank-you > * {
+	display:none;
+}
+.domain-form-warp.show-thank-you .thank-you-message *,
+.domain-form-warp.show-thank-you .thank-you-message {
+	display: block;
+	color: #fff;
+	font-size: 30px;
+	text-align: center;
 }
