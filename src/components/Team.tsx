@@ -6,9 +6,9 @@ interface Props {
   members: Array<any>;
 }
 
-function TeamMember({ image, name, position }){
+function TeamMember({ image, name, position, className }){
   return (
-    <div className="col-lg-3 col-md-6">
+    <div className={className}>
       <div className="team-member">
         <img src={image} alt="#"/>
         <h4>{name}</h4>
@@ -27,9 +27,10 @@ const Team: React.SFC<Props> = ({ className, title, members }) => {
 				<h2>{title}</h2>
 			</div>
       <div className="row">
-      {members.map((member) => {
-        return <TeamMember {...member} key={member.name} />;
-      })}
+        <TeamMember {...members[0]} className="col-md-12" />
+        {members.slice(1).map((member) => {
+          return <TeamMember {...member} className="col-lg-4 col-md-6" key={member.name} />;
+        })}
       </div>
 				</div>
     </section>

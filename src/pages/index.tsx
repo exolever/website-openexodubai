@@ -34,6 +34,7 @@ import * as corina from '../img/coaches/corina.jpg';
 import * as francisco from '../img/coaches/francisco.png';
 import * as luciana from '../img/coaches/luciana-pic.jpg';
 import * as paul from '../img/coaches/paul.png';
+import * as salim from '../img/coaches/salim.jpg';
 import * as jaroslav from '../img/coaches/jaroslav.png';
 import * as Salimi from '../img/Salimi.png';
 import * as logo0 from '../img/logo/0.jpg';
@@ -125,7 +126,7 @@ const DATA = {
       ],
       button: {
         label: 'LEARN MORE',
-        url: 'https://storage.googleapis.com/wzukusers/user-34745225/documents/5c987a606437dxmlkMHz/OpenExO%20Final.pdf'
+        url: 'brochure.pdf'
       }
     },
     events: {
@@ -177,9 +178,7 @@ const DATA = {
               title: 'AM - Special 1-2-1 Meeting',
               subtitle: 'Exclusive to Pre-Approved Delegates Only',
               sessions: [
-                'Salim Lsmail dedicates 1 hour to your company transformation, followed by a 2 hour personalised workshop with an Expert ExO coach',
-                'This is an exclusive session, open to only 6 companies on a first-come first-serve basis, with a maximum of 5 delegates per company',
-                'All requests to join this special session, must be made in advance to allocate appropriate time scheduling'
+                <>Dedicated 1 hour with Salim Ismail followed by a 2 hour personalised workshop with an Exper ExO Coach. This  activity has an additional cost and offered by appointment only. For further information please call <a href="tel:+971552297000">+971 55 229 7000</a></>
               ]
             },
             {
@@ -187,31 +186,26 @@ const DATA = {
               subtitle: 'By Invitation Only',
               sessions: [
                 {
-                  start: '18:00',
-                  end: '19:00',
-                  title: 'Welcome Drinks & Networking',
-                },
-                {
                   start: '19:00',
-                  end: '20:00',
-                  title: 'Keynote by Salim Ismail & UAE Minister & Dignitaries',
-                },
-                {
-                  start: '20:00',
-                  end: '22:00',
-                  title: 'Networking Dinner',
-                },
+                  end: '22:00 at Raffles Hotel',
+                  title:
+                    <>
+                      Welcome Drinks & Networking<br />
+                      Networking Dinner Reception
+                    </>,
+                }
               ]
             },
           ]
         },
         {
           title: () => <>18th April, 2019 <br /> OpenExO Launch</>,
-          subtitle: 'Led by Invitation Only',
+          subtitle: 'Led by Salim Ismail and Industry Leaders',
           sessions: [
             {
-              start: '17:00',
-              title: 'Launch of ExO Summit in the Middle East, Book-signing and Fireside chat between Futurist Tariq Querishy and Thought Leader Salim Ismail & followed by Live Debate with Industry Leaders and Global Organisations',
+              start: '16:30',
+              end: '19:30 at Emirates Towers',
+              title: 'Launch of ExO Summit in the Middle East, Book-signing and Fireside chat between Futurist Tariq Querishy and Thought Leader Salim Ismail & followed by Live Debate with Industry Leaders',
             },
           ]
         },
@@ -265,6 +259,16 @@ const DATA = {
     team: {
       title: 'The ExO Coaches',
       members: [
+        {
+          image: salim,
+          name: 'Salim Ismail',
+          position: 
+            <>
+              Thought-leader and best selling author<br />
+              Founding Executive Director of Singularity University<br />
+              Co-founder and Chairman of OpenExO
+            </>
+        },
         {
           image: francisco,
           name: 'Francisco Palao',

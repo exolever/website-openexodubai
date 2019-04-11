@@ -1238,7 +1238,12 @@ ol {
 	height: 214px;
 }
 
+.team-member h4 {
+	margin-bottom: 0.3em;
+}
+
 .team-member p {
+	line-height: 1.5;
 	margin-bottom: 48px;
 	font-size: 15px;
 }

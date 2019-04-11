@@ -53,6 +53,8 @@ const Hero: React.SFC<Props> = ({ title, subtitle, cta, image, backgroundImage }
                 <LogoLink href="http://www.openexo.com" target="_blank">OpenExO</LogoLink>
               </Logo>
               <p>{subtitle}</p>
+              <p><a href="tel:+971552297000" className="site-btn ghost">Contact Us: +971 55 229 7000</a></p>
+              <p><a href="brochure.pdf" target="_blank" className="site-btn ghost">DOWNLOAD BROCHURE</a></p>
               <a href={cta.target} className="site-btn ghost">{cta.text}</a>
             </div>
           </div>

@@ -37,15 +37,15 @@ interface Props {
 const Sessions = ({ sessions }) => {
   return (
     <ul className="text-left">
-      {sessions.map((content) =>
-        <li key={typeof content === 'string' ? content : content.title}>
-          {typeof content === 'string'
-            ? <span>{content}</span>
-            : 
+      {sessions.map((content, index) =>
+        <li key={index}>
+          {typeof content !== 'string' && content.title
+            ? 
               <>
                 <span>{content.start}{content.end && (' - '+ content.end)}</span><br/>
                 <strong>{content.title}</strong>
               </>
+            : <span>{content}</span>
           }
         </li>
       )}
