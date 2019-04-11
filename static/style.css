@@ -1972,3 +1972,7 @@ a:hover {
 	height: 70vh;
 	background-position: bottom;
 }
+
+.ecosystem p {
+	font-size: 1em;
+}

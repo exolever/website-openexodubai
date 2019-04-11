@@ -11,8 +11,9 @@ import Books from '../components/Books';
 import Events from '../components/Events';
 import Team from '../components/Team';
 import Video from '../components/Video';
-import Section from '../components/Section';
-import HighlightSection from '../components/HighlightSection';
+import Services from '../components/Services';
+import Partners from '../components/Partners';
+import Ecosystem from '../components/Ecosystem';
 
 // import * as sectionBg from '../img/bg-61-img.jpg';
 import * as sectionBg from '../img/main-bg.jpg';
@@ -370,53 +371,11 @@ class IndexPage extends React.Component<any, State> {
           
           <Team className="team-section" title={DATA.en.team.title} members={DATA.en.team.members}></Team>
 
-          <HighlightSection title={DATA.en.ecosystem.title} backgroundImage={mapBgAlt} className="ecosystem">
-            <div className="text-center">
-              {DATA.en.ecosystem.description()}
-            </div>
-          </HighlightSection>
+          <Ecosystem title={DATA.en.ecosystem.title} description={DATA.en.ecosystem.description()} backgroundImage={mapBgAlt} />
 
-          <Section>
-            <div className="row spad text-center">
-              <h2 className="col-lg-12">{DATA.en.partners.title}</h2>
-            </div>
-            <div className="row text-center">
-              <h3 className="col-lg-12">{DATA.en.partners.sections[0].title}</h3>
-              {DATA.en.partners.sections[0].logos.map(logo => <div key={logo} className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
-            </div>
-            <div className="row text-center">
-              <h3 className="col-lg-12">{DATA.en.partners.sections[1].title}</h3>
-              {DATA.en.partners.sections[1].logos.map(logo => <div key={logo} className="col-lg-12 logo-item"><img className="text-center" src={logo} /></div>)}
-            </div>
-            <div className="row text-center">
-              <h3 className="col-lg-12">{DATA.en.partners.sections[2].title}</h3>
-              {DATA.en.partners.sections[2].logos.map(logo => <div key={logo} className="col-lg-4 logo-item"><img className="text-center" src={logo} /></div>)}
-            </div>
-          </Section>
+          <Partners title={DATA.en.partners.title} sections={DATA.en.partners.sections} />
 
-          <HighlightSection
-              title={`Transformation as a service`}
-              backgroundImage={sectionBgAlt}
-            />
-
-          <Section>
-            <div className="row">
-            <div className="col-lg-6 text-center">
-            <h3>ExO Sprint</h3>
-            <p>
-            An ExO Sprint is a 10-week process based on the book <a href="https://www.exponentialtransformationbook.com/" target="_blank"><strong><em>Exponential Transformation</em></strong></a> that helps organizations to evolve their business models from scarcity to abundance while dealing with the immune system. The ExO Sprint has been successfully run in large, medium and small organizations around the world. It is designed to rapidly move your organization’s leadership culture and management thinking forward.
-            </p>
-            </div>
-            <div className="col-lg-6 text-center">
-            <h3 >ExO Sprint</h3>
-            <p>ExO On-Demand is a customized product built around flexible access to our ExO Ecosystem members. Consult technology and industry specialists, enhance your strategic offsite with virtual advisors, incubate your disruptive initiatives with exponentially minded people... these are just a few of the ways we can help you if your organization wants to start or has already started a transformation process. </p>
-            </div>
-
-            </div>
-            <div className="text-center">
-              <a target="_blank" className="site-btn text-white" href="https://www.openexo.com/transformation-services">Request a service</a>
-            </div>
-          </Section>
+          <Services backgroundImage={sectionBgAlt} />
 
           <Footer links={DATA.en.footer.links} copyright={DATA.en.footer.copyright} mainLogo={DATA.en.footer.main} />
         </Page>
