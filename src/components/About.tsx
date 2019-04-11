@@ -43,7 +43,7 @@ const About: React.SFC<Props> = ({ title, description, content = [] }) => {
         <div className="text-center about-text">
           <h2>{title}</h2>
         </div>}
-      {description && content.length > 0 &&
+      {description &&
         <div className="text-center about-text">
           <p className="text-center">{description()}</p>
         </div>}

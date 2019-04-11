@@ -23,7 +23,7 @@ const LogoImg = styled.img`
 const LogoLink = styled.a`
   display: block;
   position: absolute;
-  right: 147px;
+  right: 160px;
   bottom: 17px;
   width: 134px;
   height: 40px;

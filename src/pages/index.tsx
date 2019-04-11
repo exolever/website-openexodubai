@@ -30,7 +30,7 @@ import * as book01 from '../img/book01.png';
 import * as book02 from '../img/book02.png';
 import * as emilie from '../img/coaches/emilie.png';
 import * as evonne from '../img/coaches/evonne.png';
-import * as corina from '../img/coaches/corina.jpeg';
+import * as corina from '../img/coaches/corina.jpg';
 import * as francisco from '../img/coaches/francisco.png';
 import * as luciana from '../img/coaches/luciana-pic.jpg';
 import * as paul from '../img/coaches/paul.png';
@@ -45,6 +45,8 @@ import * as logo5 from '../img/logo/5.jpg';
 import * as logo6 from '../img/logo/6.jpg';
 import * as logo7 from '../img/logo/7.jpg';
 import * as logo8 from '../img/logo/8.jpg';
+import * as logo9 from '../img/logo/9.png';
+import * as logo10 from '../img/logo/10.png';
 
 interface State {
   style: {
@@ -215,7 +217,7 @@ const DATA = {
         },
       ],
       button: {
-        label: 'CONTACT US TO BE A PART OF ExO Summit Dubai',
+        label: 'CONTACT US TO BE PART OF THE EXO SUMMIT DUBAI',
         url: 'mailto:marketing@madtalks.com'
       }
     },
@@ -227,6 +229,15 @@ const DATA = {
         label: 'VIDEO: SALIM ISMAIL - TEDx',
         url: 'https://www.youtube.com/watch?v=mV0oKVOIGG4'
       }
+    },
+    about3: {
+      title: 'What Was ExO Works Created to Achieve?',
+      description: () =>
+        <>
+          ExO Works was co-founded by Salim Ismail, the founding executive director of Singularity University and current board member of XPRIZE Foundation.<br />
+          Salim identified a new breed of companies, Exponential Organizations (ExOs) that deliver 10X more impact versus their peers, usually for less cost. He analyzed the shared attributes driving the hyper-growth of these companies and explained their success in his book, Exponential Organizations. Salim travels extensively, sharing a global perspective with business luminaries and heads of state.
+        </>,
+      features: []
     },
     form: {
       title: () => <>CONTACT</>,
@@ -302,7 +313,7 @@ const DATA = {
         },
         {
           title: `Strategic Partners`,
-          logos: [logo1, logo2, logo3, logo4, logo6, logo7]
+          logos: [logo1, logo2, logo3, logo4, logo6, logo7, logo9, logo10]
         }
       ]
     },
@@ -354,6 +365,11 @@ class IndexPage extends React.Component<any, State> {
             backgroundImage={DATA.en.video.backgroundImage}
             image={DATA.en.video.image}
             button={DATA.en.video.button}
+          />
+
+          <About
+            title={DATA.en.about3.title}
+            description={DATA.en.about3.description}
           />
 
           <Team className="team-section" title={DATA.en.team.title} members={DATA.en.team.members}></Team>
