@@ -1976,3 +1976,11 @@ a:hover {
 .ecosystem p {
 	font-size: 1em;
 }
+
+.service-section h3 {
+	margin-bottom: 35px;
+}
+
+.service-section .row {
+	margin-bottom: 35px;
+}

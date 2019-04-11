@@ -8,7 +8,7 @@ const Services = ({ backgroundImage }) =>
       title={`Transformation as a service`}
       backgroundImage={backgroundImage}
     />
-    <Section>
+    <Section className="service-section">
       <div className="row">
         <div className="col-lg-6 text-center">
           <h3>ExO Sprint</h3>
