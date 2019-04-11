@@ -2000,6 +2000,13 @@ a:hover {
 	font-size: 1em;
 }
 
+.partners-section .logo-item {
+	display: inline-flex;
+	height: 200px;
+	align-items: center;
+	align-content: center;
+}
+
 iframe {
 	border:0;
 	border-radius: 30px;
