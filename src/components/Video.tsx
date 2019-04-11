@@ -23,13 +23,13 @@ const Video: React.SFC<Props> = ({ title, image, backgroundImage, button }) => {
   `;
 
   return (
-    <HighlightSection backgroundImage={backgroundImage}>
+    <HighlightSection backgroundImage={backgroundImage} className="pb-0">
       <Row className="row">
         <div className="col-lg-6">
           <div className="section-title text-left">
             <h2 className="text-white">{title}</h2>
           </div>
-          {button && 
+          {button &&
             <div className="text-center">
               <a target="_blank" className="site-btn text-white" href={button.url}>{button.label}</a>
             </div>}
