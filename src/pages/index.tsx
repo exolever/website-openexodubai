@@ -30,6 +30,7 @@ import * as book01 from '../img/book01.png';
 import * as book02 from '../img/book02.png';
 import * as emilie from '../img/coaches/emilie.png';
 import * as evonne from '../img/coaches/evonne.png';
+import * as corina from '../img/coaches/corina.jpeg';
 import * as francisco from '../img/coaches/francisco.png';
 import * as luciana from '../img/coaches/luciana-pic.jpg';
 import * as paul from '../img/coaches/paul.png';
@@ -279,9 +280,9 @@ const DATA = {
           position: 'Head ExO Coach'
         },
         {
-          image: evonne,
-          name: 'Evonne Heyning',
-          position: 'Director of Corporate Growth - OpenExO'
+          image: corina,
+          name: 'Corina Almagro',
+          position: 'CMO - OpenExO'
         },
       ]
     },
