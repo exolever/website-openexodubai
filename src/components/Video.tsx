@@ -20,10 +20,11 @@ const Video: React.SFC<Props> = ({ title, image, backgroundImage, button }) => {
     background-position: calc(100% + 205px) 100%;
     background-repeat: no-repeat;
     min-height: 470px;
+
   `;
 
   return (
-    <HighlightSection backgroundImage={backgroundImage} className="pb-0">
+    <HighlightSection backgroundImage={backgroundImage} className="pb-0 video-section">
       <Row className="row">
         <div className="col-lg-6">
           <div className="section-title text-left">

@@ -1814,6 +1814,9 @@ ol {
 	.site-btn.ghost {
 		min-width: 0;
 	}
+	.video-section .row {
+		min-height: 105vh;
+	}
 }
 
 /* MailChimp Form Embed Code - Classic - 12/17/2015 v10.7 */

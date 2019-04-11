@@ -1,7 +1,8 @@
 {
   "name": "website-exosummitsdubai",
   "alias": [
-    "openexodubai.now.sh"
+    "openexodubai.now.sh",
+    "openexodubai.com"
   ],
   "github": {
     "enabled": true,
