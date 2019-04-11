@@ -7,11 +7,15 @@ interface Column {
   image: any;
 }
 
+interface Button {
+  label: string;
+  url: string;
+}
 interface Props {
   title: string;
   titleBg: string;
   content: Column[];
-  button: any;
+  button: Button;
 }
 
 const About: React.SFC<Props> = ({ title, titleBg, content, button }) => {
@@ -25,7 +29,7 @@ const About: React.SFC<Props> = ({ title, titleBg, content, button }) => {
       <Section className="about-section">
         <div className="row spad">
           {content.map(({ title, image }) =>
-            <div className={`col-lg-${column}  text-center`}>
+            <div key={title} className={`col-lg-${column}  text-center`}>
               <div className="about-text">
                 <h3>{title}</h3>
                 <img src={image} alt={title} width="400" />
@@ -33,9 +37,10 @@ const About: React.SFC<Props> = ({ title, titleBg, content, button }) => {
             </div>
           )}
         </div>
-        <div className="text-center">
-          <a target="_blank" className="site-btn text-white" href={button.url}>{button.label}</a>
-        </div>
+        {button &&
+          <div className="text-center">
+            <a target="_blank" className="site-btn text-white" href={button.url}>{button.label}</a>
+          </div>}
       </Section>
     </>
   );
