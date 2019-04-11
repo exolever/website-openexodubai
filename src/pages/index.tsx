@@ -366,7 +366,6 @@ class IndexPage extends React.Component<any, State> {
               {DATA.en.ecosystem.description()}
             </div>
           </HighlightSection>
-
           <Section>
             <div className="row spad text-center">
               <h2 className="col-lg-12">{DATA.en.partners.title}</h2>
