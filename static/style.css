@@ -191,7 +191,7 @@ ol {
 .site-btn {
 	display: inline-block;
 	border: none;
-	font-size: 14px;
+	font-size: 1em;
 	font-weight: 400;
 	min-width: 300px;
 	padding: 17px 25px;
@@ -1998,6 +1998,10 @@ a:hover {
 
 .service-section .row {
 	margin-bottom: 35px;
+}
+
+.service-section p {
+	font-size: 1em;
 }
 
 iframe {
