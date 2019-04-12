@@ -32,7 +32,7 @@ import * as emilie from '../img/coaches/emilie.png';
 import * as evonne from '../img/coaches/evonne.png';
 import * as corina from '../img/coaches/corina.jpg';
 import * as francisco from '../img/coaches/francisco.png';
-import * as luciana from '../img/coaches/luciana.png';
+import * as luciana from '../img/coaches/luciana1.jpg';
 import * as paul from '../img/coaches/paul.png';
 import * as salim from '../img/coaches/salim.jpg';
 import * as jaroslav from '../img/coaches/jaroslav.png';
@@ -263,7 +263,7 @@ const DATA = {
         {
           image: salim,
           name: 'Salim Ismail',
-          position: 
+          position:
             <>
               Thought-leader and best selling author<br />
               Founding Executive Director of Singularity University<br />
