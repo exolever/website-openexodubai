@@ -11,7 +11,7 @@ interface Props {
 
 const Footer: React.SFC<Props> = ({ links = [], copyright, mainLogo }) => (
   <footer className="set-bg exo-footer">
-    <a href={mainLogo.url} target="_blank"><img className="core-logo" alt={mainLogo.text} src="/social/openexo_logo_white.png" /></a>
+    <a href={mainLogo.url} target="_blank"><img className="core-logo" alt={mainLogo.text} src="social/openexo_logo_white.png" /></a>
 		<div className="footer-widget">
 			<ul>
         {links.map(link => <li key={link.url}><a href={link.url} target="_blank">{link.text}</a></li>)}
@@ -20,7 +20,7 @@ const Footer: React.SFC<Props> = ({ links = [], copyright, mainLogo }) => (
     <div className="container">
       <div className="copyright">{copyright()}</div>
     </div>
-    <small className="container love"> Made with ❤ by <a target="_blank" href="https://www.exodev.team">ExO Dev</a></small>
+    <small className="container love"> Made with ❤ by <a target="_blank" href="https://www.openexo.com">OpenExO</a></small>
   </footer>
 );
 
