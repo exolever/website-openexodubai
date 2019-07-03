@@ -50,7 +50,7 @@ const Hero: React.SFC<Props> = ({ title, subtitle, cta, image, backgroundImage }
           <div className="row">
             <div className="logo-center text-center">
               <Logo>
-                <LogoImg src="/social/logo.svg" alt="exo summit"/>
+                <LogoImg src="social/logo.svg" alt="exo summit"/>
                 <LogoLink href="http://www.openexo.com" target="_blank">OpenExO</LogoLink>
               </Logo>
               <p>{subtitle}</p>

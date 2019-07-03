@@ -1,6 +1,7 @@
 'use strict'
 
 module.exports = {
+  pathPrefix: `/website-openexodubai`,
   siteMetadata: {
     title: 'ExO Summits Dubai  | Inspire, educate and support leaders for a the world for a better future.',
     siteUrl: 'http://openexodubai.com',
@@ -30,7 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-133300815-1",
+        trackingId: "UA-135475643-6",
         // Puts tracking script in the head instead of the body
         head: true,
         // Setting this parameter is optional
@@ -83,7 +84,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-canonical-urls',
       options: {
-        siteUrl: 'http://exodevhub.com'
+        siteUrl: 'https://www.openexo.com'
       }
     },
     'gatsby-plugin-emotion',
