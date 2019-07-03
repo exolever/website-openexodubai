@@ -22,10 +22,10 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-hotjar`,
+      resolve: 'gatsby-plugin-mailchimp',
       options: {
-        id: 1175385,
-        sv: 6
+        endpoint:
+          'https://exodevhub.us20.list-manage.com/subscribe/post?u=ccfff1ccf7951d4ec0af22cac&amp;id=8ca8438865',
       },
     },
     {
