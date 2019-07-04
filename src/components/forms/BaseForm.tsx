@@ -5,7 +5,8 @@ import styled from '@emotion/styled';
 import Checkbox from './Checkbox';
 
 const Form = {
-  endpoint: 'https://usebasin.com/f/c89a00f6e333'
+  // endpoint: 'https://usebasin.com/f/c89a00f6e333'
+  endpoint: 'https://exodevhub.us20.list-manage.com/subscribe/post?u=ccfff1ccf7951d4ec0af22cac&amp;id=8ca8438865'
 };
 
 interface Labels {
@@ -126,6 +127,8 @@ class BaseForm extends React.Component<Props, State> {
             target="_blank"
             action={`${Form.endpoint}`}
           >
+
+            <input type="text" value="openexodubai.com" name="SITE" id={`mce-PHONE-${this.id}`} />
             <div className="mc_embed_signup_scroll">
             <div className="indicates-required"><span className="asterisk">*</span>&nbsp;{labels.required}</div>
 
