@@ -128,7 +128,7 @@ class BaseForm extends React.Component<Props, State> {
             action={`${Form.endpoint}`}
           >
 
-            <input type="text" value="openexodubai.com" name="SITE" id={`mce-PHONE-${this.id}`} />
+            <input type="hidden" value="openexodubai.com" name="SITE" />
             <div className="mc_embed_signup_scroll">
             <div className="indicates-required"><span className="asterisk">*</span>&nbsp;{labels.required}</div>
 
