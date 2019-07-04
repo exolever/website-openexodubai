@@ -22,13 +22,6 @@ module.exports = {
       }
     },
     {
-      resolve: 'gatsby-plugin-mailchimp',
-      options: {
-        endpoint:
-          'https://exodevhub.us20.list-manage.com/subscribe/post?u=ccfff1ccf7951d4ec0af22cac&amp;id=8ca8438865',
-      },
-    },
-    {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
         trackingId: "UA-135475643-6",
